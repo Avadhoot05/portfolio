@@ -295,7 +295,7 @@ a{
     }
 
     .title>div:nth-child(2){
-        margin-top: 5px;
+        margin-top: 1.5rem;
         width:20rem;
     }
 
@@ -303,6 +303,7 @@ a{
     font-size: 0.9rem;
     letter-spacing: 0.03rem;
     line-height: 1.7;
+   
     }
 
     .title br{
@@ -788,7 +789,7 @@ a{
 }
 
 .Experience .box .rrc{
-    width: 75%;
+    width: 50%;
 }
 
 .Experience .box .dl{
