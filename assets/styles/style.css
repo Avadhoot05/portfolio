@@ -456,7 +456,7 @@ a{
 @media all and (min-width: 350px) and (max-width: 576px){
     .skills{
         padding: 2rem 1.5rem 0 1.5rem;
-        margin-top: 5rem;
+        margin-top: 10rem;
     }
 
     .skills .heading{
@@ -845,6 +845,11 @@ box-shadow: 0 0 8px 0px #000;
 }
 
 @media all and (max-width:991px){
+
+    .Experience{
+        margin-top: 10rem;
+    }
+
     .Experience .container{
         grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
         grid-template-rows: minmax(100px,auto);
@@ -1054,7 +1059,7 @@ box-shadow: 0 0 8px 0px #000;
     .contact{
         display:block;
         padding: 2rem 1rem 0 1rem;
-        margin-top: 5rem;
+        margin-top: 10rem;
     }
     .contact .heading{
         text-align: center;
