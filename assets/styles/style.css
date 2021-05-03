@@ -21,6 +21,7 @@ html,body {
     text-decoration: none;
     background-color:#18181a;
     transition: background-color 0.5s linear;
+    
 }
 
 
@@ -29,7 +30,9 @@ html,body {
 }
 
 .intro,
-.intro-mobile{
+.intro-mobile,
+.slider,
+.slider-mobile{
     position: fixed;
     top:0;
     left:0;
@@ -41,14 +44,8 @@ html,body {
 
 .slider,
 .slider-mobile{
-    position: fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
     background-color: var(--secondary-color);
     transform: translateY(155%);
-    z-index: 6;
 }
 
 .progressbar{
@@ -100,7 +97,6 @@ a{
 }
 
 .landing #tog{
-
     width:2.2rem;
     height: 2.2rem;
 }
@@ -122,13 +118,11 @@ a{
         margin-top:10rem;
     }
 
-
     .navigation-bar-mobile a{
         text-align: center;
         opacity: 0;
  
     }
-
 
     .landing .ham,
     .close{
@@ -211,7 +205,6 @@ a{
     line-height: 1.5rem;
     position: absolute;
     top:0;
-    /* left: -600px; */
     width: inherit;
     height: inherit;
 }
@@ -252,11 +245,6 @@ a{
     opacity: 0;
 }
 
-
-
- 
-
-
 @keyframes mainBlock {
     0%{
         width:0;
@@ -279,8 +267,6 @@ a{
         opacity: 1;
     }
 }
-
-
 
 @keyframes left-to-right{
     100%{
@@ -324,9 +310,6 @@ a{
 
 
 
-
-
-
 /*---------------------------------------skills---------------------------*/
 
 .skills{
@@ -352,9 +335,7 @@ a{
     height:250px;
     border-radius: 30px 0 30px 0;
     overflow: hidden;
-    
     /* border: 5px solid #fff; */
-    
 }
 
 .skills .person img{
@@ -379,8 +360,6 @@ a{
     opacity: 0;
 }
 
-
-
 .skills .person .overlay{
     position: absolute;
     top:0;
@@ -401,7 +380,6 @@ a{
     align-items: flex-end;
     justify-content: end;
     overflow: hidden;
-    
 }
 
 .skills .skill-outer{
@@ -432,15 +410,10 @@ a{
     transition: all 0.5s linear;
 }
 
-
-
 .skills .skill-outer:hover{
     box-shadow: 0 0 8px 0px #000;
 
 }
-
-
-
 
 @keyframes bottom-up {
     100%{
@@ -449,12 +422,10 @@ a{
     
 }
 
-
 .skills .image-parent{
     position: relative;
     margin-top: 1rem;
 }
-
 
 .skills .skill-outer img{
     margin-top:1rem;
@@ -479,8 +450,6 @@ a{
     z-index: 1;
     margin:0;
 }
-
-
 
 
 
@@ -560,7 +529,7 @@ a{
 
 .projects h5{
     position: relative;
-    font: normal normal 700 2vw 'Exo 2', sans-serif;
+    font: normal normal 700 2vw 'Open Sans', sans-serif;
     color: #fff;
     text-align: left;
     margin: 0 0 1rem 0;
@@ -658,7 +627,7 @@ a{
     }
 
     .projects h5{
-        font-size:5vw ;
+        font-size:5vw;
         margin: 0 0 1rem 0;
     }
     
@@ -713,7 +682,13 @@ a{
 }
 
 
-
+@media all and (min-width: 580px) and (max-width: 1100px){
+    .projects{
+        margin-top: 18rem;
+        padding-left:3rem;
+        padding-right: 3rem;
+    }
+}
 
 
 
@@ -746,6 +721,7 @@ a{
     grid-template-rows: minmax(150px,auto);
     grid-auto-flow: dense;
     grid-gap: 15px;
+
 }
 
  .Experience .container .box{
@@ -774,8 +750,8 @@ a{
 
 .Experience .content p{
     color: var(--para-color);
-    font: normal normal 300 1.05vw 'Exo 2', sans-serif;
-    margin:1rem 0 0 0;
+    font: normal normal 300 0.9vw 'Open Sans', sans-serif;
+    margin: 1rem 0 0 0;
 }
 
 .Experience span{
@@ -1211,14 +1187,16 @@ box-shadow: 0 0 8px 0px #000;
 /*----------------Dark Mode---------------*/
 body.dark .intro,
 body.dark .intro-mobile{
-    background-color: rgb(48, 48, 48);
+    background-color: #303030;
 }
 
 body.dark .slider,
-body.dark .slider-mobile{
+body.dark .slider-mobile,
+body.dark .name-outer,
+body.dark .skill-inner,
+body.dark .overlay-box{
     background-color: var(--primary-color-light);
 }
-
 
 body.dark,
 body.dark .ham-parent,
@@ -1227,17 +1205,15 @@ body.dark html {
 }
 
 body.dark .navigation-bar a,
-body.dark .navigation-bar-mobile a{
+body.dark .navigation-bar-mobile a,
+.Extra .svg-inline--fa,
+body.dark .contact .wrapper .button .icon .svg-inline--fa,
+body.dark .credit-container a{
     color:var(--primary-color-light);
 }
 
-body.dark .name-outer{
-    background-color: var(--primary-color-light);
-}
-
-
-
-body.dark .navigation-bar a:hover{
+body.dark .navigation-bar a:hover,
+body.dark .projects h5{
     color: #000;
 }
 
@@ -1260,16 +1236,11 @@ body.dark .skills .person img{
     filter:grayscale(0);
 }
 
-body.dark .skills .short-bio p{
+body.dark .skills .short-bio p,
+body.dark .credit-container h6{
     color:var(--heading-color-light);
-
 }
 
-
-body.dark .skill-inner,
-body.dark .overlay-box{
-    background-color: var(--primary-color-light);
-}
 
 body.dark .projects .inner-box:hover .overlay-box{
     background-color: var(--heading-shadow-light);
@@ -1277,10 +1248,6 @@ body.dark .projects .inner-box:hover .overlay-box{
 
 body.dark .projects .inner-box{
     border: 1px solid var(--primary-color-light);
-}
-
-body.dark .projects h5{
-    color:#000;
 }
 
 body.dark .projects p{
@@ -1305,10 +1272,7 @@ body.dark .Experience .content p{
     color: rgb(0, 30, 65);
 }
 
-.Extra .svg-inline--fa{
 
-    color: var(--primary-color-light);
-}
 
 body.dark button{
     border: 1px solid var(--primary-color-light);
@@ -1326,9 +1290,6 @@ body.dark .contact .wrapper .button{
     color:var(--heading-color-light);
 }
 
-body.dark .contact .wrapper .button .icon .svg-inline--fa{
-    color:var(--primary-color-light);
-}
 
 body.dark .contact input:focus, 
 body.dark .contact textarea:focus{
@@ -1343,35 +1304,4 @@ body.dark .contact button:hover, .Experience button:hover{
     border:none;
     outline:1px solid var(--secondary-color);
 }
-
-body.dark .credit-container h6{
-    color:var(--heading-color-light);
-}
-
-body.dark .credit-container a{
-    color:var(--primary-color-light);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

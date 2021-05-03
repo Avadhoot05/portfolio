@@ -1,10 +1,6 @@
-const lines = document.querySelectorAll(".line");
 const labels = document.querySelectorAll(".label");
-const title_desc = document.querySelector(".desc");
-const skill_level = document.querySelectorAll(".skill-inner");
 const project_rows = document.querySelectorAll(".project-rows"); //element
 const overlay_box = document.querySelectorAll(".projects .overlay-box"); //element
-const Experience = document.querySelectorAll(".Experience");
 const togg = document.getElementById("tog");
 
 
@@ -58,7 +54,7 @@ togg.addEventListener("click",function(){
 
 
 //---------------------Skills Graph horizotnal lines-----------------------
-lines.forEach((element,index)=>{
+document.querySelectorAll(".line").forEach((element,index)=>{
     element.style.bottom = `${index*25}%`;
     labels[index].style.bottom = `${index*25.5+25}%`;
 
@@ -89,7 +85,7 @@ var waypoint = new Waypoint({
         overlay_box[0].style.animation= "right-to-left 0.5s ease 0.1s forwards";
         overlay_box[1].style.animation= "right-to-left 0.5s ease 0.1s forwards";
     },
-    offset: 500
+    offset: 700
 })
 
 //-----------------------------------------------------------------------------------------
@@ -99,7 +95,7 @@ var waypoint = new Waypoint({
         overlay_box[2].style.animation= "right-to-left 0.5s ease 0.1s forwards";
         overlay_box[3].style.animation= "right-to-left 0.5s ease 0.1s forwards";
     },
-    offset: 500
+    offset: 700
 })
 
 waypoint = new Waypoint({
@@ -108,7 +104,7 @@ waypoint = new Waypoint({
         overlay_box[4].style.animation= "right-to-left 0.5s ease 0.1s forwards";
         overlay_box[5].style.animation= "right-to-left 0.5s ease 0.1s forwards";
     },
-    offset: 500
+    offset: 700
 })
 
 waypoint = new Waypoint({
@@ -130,14 +126,14 @@ waypoint = new Waypoint({
 
         opacityAnimation('.skills .short-bio span',1000,'easeInSine',anime.stagger(4,{start:1000})) //short bio
 
-        skill_level.forEach((element,index) => {
+        document.querySelectorAll(".skill-inner").forEach((element,index) => {
             element.style.animation= `bottom-up 0.4s cubic-bezier(0.22, 0.61, 0.36, 1) ${index*0.08}s forwards`;
         }); 
         
 
 
     },
-    offset:200
+    offset:400
 })
 
 
@@ -148,40 +144,8 @@ waypoint = new Waypoint({
         opacityAnimation('.Experience .box',100,'linear',anime.stagger(150,{start:200}))
         
     },
-    offset:500
+    offset:600
 })
-
-
-//-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
-//------------------------------------------------------------------
-//gsap.registerPlugin(MotionPathPlugin);
-// const tween = gsap.timeline();
-
-
-// tween.to('.pentagon-move',1,{
-//     ease: Power1.easeInOut,
-//     motionPath:{
-//         path:[{x:10,y:15}],
-//         curviness:1,
-//         autoRotate:false,
-//     }
-// });
-
-// const controller = new ScrollMagic.Controller();
-
-// const scene = new ScrollMagic.Scene({
-//     triggerElement:'.pentagon-main',
-//     duration:300,
-//     triggerHook:0.5
-// })
-// .setTween(tween)
-// //.addIndicators()
-// .addTo(controller);
-
-
-
-
 
 
 /*---------------------------Form Submission-------------------------------*/
@@ -232,3 +196,29 @@ $('#sbmt').on('click', function(e) {
 
 
 
+//-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+//------------------------------------------------------------------
+//gsap.registerPlugin(MotionPathPlugin);
+// const tween = gsap.timeline();
+
+
+// tween.to('.pentagon-move',1,{
+//     ease: Power1.easeInOut,
+//     motionPath:{
+//         path:[{x:10,y:15}],
+//         curviness:1,
+//         autoRotate:false,
+//     }
+// });
+
+// const controller = new ScrollMagic.Controller();
+
+// const scene = new ScrollMagic.Scene({
+//     triggerElement:'.pentagon-main',
+//     duration:300,
+//     triggerHook:0.5
+// })
+// .setTween(tween)
+// //.addIndicators()
+// .addTo(controller);
