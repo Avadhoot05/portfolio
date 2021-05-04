@@ -15,7 +15,16 @@
     margin: 0;
     padding:0;
     box-sizing: border-box;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome, Edge, Opera and Firefox */
 }
+
+
 
 html,body {
     text-decoration: none;
@@ -90,6 +99,7 @@ a{
 }
 
 .landing #tog{
+    cursor: pointer;
     position:absolute;
     top:6%;
     left:5%;
@@ -183,7 +193,8 @@ a{
     font: normal normal 700 7vw 'Open Sans', sans-serif;
     line-height: 4.5rem;
     letter-spacing: 0.05rem;
-    transform:all 0.2s linear;
+    transition:all 0.2s linear;
+    
 }
 
 .title .name:hover{
@@ -691,6 +702,18 @@ a{
 }
 
 
+@media all and (min-width: 1100px) and (max-width: 1600px){
+    .projects .inner-box{
+        height: 13rem;
+
+    }
+}
+
+
+
+
+
+
 
 /*------------------------------------------------Experience-------------------*/
 
@@ -1002,8 +1025,7 @@ box-shadow: 0 0 8px 0px #000;
 
 .contact button,
 .Experience button{
-    
-    display:block;
+    cursor: pointer;
     padding: 0.3rem 1rem;
     background-color: transparent;
     color:var(--primary-color);
@@ -1086,7 +1108,6 @@ box-shadow: 0 0 8px 0px #000;
 /*-----------------------Social Media--------------------------------*/
 
 .contact .resume{
-    display:block;
     margin-top: 0.3rem;
     float:left;
 }
@@ -1097,12 +1118,18 @@ box-shadow: 0 0 8px 0px #000;
     transition: transform 0.2s linear;
 }
 
+.contact button{
+    vertical-align: top;
+}
+
 .contact  button:hover .svg-inline--fa{
     transform: rotateZ(90deg);
 }
 
 .contact  button:hover,
 .Experience button:hover{
+    
+    border:none;
     outline: 1px solid var(--secondary-color);    
 }
 
@@ -1119,7 +1146,7 @@ box-shadow: 0 0 8px 0px #000;
     width: 60px;
     margin: 10px 10px 0 0;
     background-color: #24242491;
-    transition: all 0.3s ease-out;
+    transition: outline 0.3s ease-out;
     
 }
 
@@ -1144,24 +1171,37 @@ box-shadow: 0 0 8px 0px #000;
     outline: 1px solid var(--secondary-color) ;
 }
 
+.contact .wrapper .mail{
+    margin-top:3rem;
+}
+
+
+
+
+
 .contact .credit-container{
     display:flex;
     flex-direction: row;
     justify-content: center;
 }
+
 .contact .end-credits{
     font:normal normal 400 1rem 'Open Sans', sans-serif;
     color:#fff;
 }
 
-.contact .end-credits a{
+.contact .end-credits a,
+.contact .wrapper .mail a{
     font:normal normal 400 1rem 'Open Sans', sans-serif;
     color:var(--primary-color);
 }
 
-.contact .end-credits a:hover{
+
+.contact .end-credits a:hover
+{
     color:var(--secondary-color);
 }
+
 
 
 
@@ -1213,7 +1253,8 @@ body.dark .navigation-bar a,
 body.dark .navigation-bar-mobile a,
 .Extra .svg-inline--fa,
 body.dark .contact .wrapper .button .icon .svg-inline--fa,
-body.dark .credit-container a{
+body.dark .credit-container a,
+body.dark .contact .wrapper .mail a{
     color:var(--primary-color-light);
 }
 
@@ -1310,3 +1351,6 @@ body.dark .contact button:hover, .Experience button:hover{
     outline:1px solid var(--secondary-color);
 }
 
+body.dark .contact .wrapper .mail a:hover{
+    color:var(--secondary-color);
+}
