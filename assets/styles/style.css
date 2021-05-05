@@ -410,16 +410,7 @@ a{
     background-color: var(--primary-color);
 }
 
-.skills h4{
-    position: absolute;
-    width:100%;
-    padding:0.3rem 5%;
-    font:normal normal 400 90% 'Open Sans', Sans-serif;
-    background-color: transparent;
-    color:var(--heading-shadow);
-    display:none;
-    transition: all 0.5s linear;
-}
+
 
 .skills .skill-outer:hover{
     box-shadow: 0 0 8px 0px #000;
@@ -1197,8 +1188,8 @@ box-shadow: 0 0 8px 0px #000;
 }
 
 
-.contact .end-credits a:hover
-{
+.contact .end-credits a:hover,
+.contact .wrapper .mail a:hover{
     color:var(--secondary-color);
 }
 
