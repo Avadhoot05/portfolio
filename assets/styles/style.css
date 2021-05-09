@@ -204,10 +204,6 @@ a{
 
 }
 
-.title .initial{
-    font-size: 8vw;
-}
-
 .title .desc{
     padding-left: 1rem;
     color: var(--para-color);
@@ -525,10 +521,6 @@ a{
     transition: transform 0.5s linear;
 }
 
-.project .inner-box:last-child{
-    display: block;
-}
-
 .projects h5{
     position: relative;
     font: normal normal 700 2vw 'Open Sans', sans-serif;
@@ -560,15 +552,6 @@ a{
 .projects .inner-box:hover .overlay-box{
     background-color:var(--secondary-color);
 } 
-
-.projects .github-link{
-        font-size: 25px;
-        line-height: 55px;
-        color: var(--para-color);
-        transition: all 0.3s ease-out;
-        margin-left:5px;
-}
-
 
 @keyframes right-to-left{
     100%{
