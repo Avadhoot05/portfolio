@@ -27,13 +27,13 @@ $(window).scroll(function(){
 let darkflag = localStorage.getItem("darkflag");
 
 const enableDark=()=>{
-    togg.src="../assets/media/moon.png";
+    togg.src="../assets/media/moon.webp";
     document.body.classList.add("dark");
     localStorage.setItem('darkflag','enabled');
 }
 
 const disableDark=()=>{
-    togg.src="../assets/media/sun.png";
+    togg.src="../assets/media/sun.webp";
     document.body.classList.remove("dark");
     localStorage.setItem('darkflag','disabled');
 }

@@ -774,25 +774,7 @@ a{
 }
 
 
-.Experience .box .brandyse{
-    width: 56%;
-}
 
-.Experience .box .rrc{
-    width: 50%;
-}
-
-.Experience .box .dl{
-    width: 34%;
-}
-
-.Experience .box .Roborise-Logo{
-    width: 40%;
-}
-
-.Experience .box .umi{
-    width: 62%;
-}
 
 .Experience .dark{
     display: none;
@@ -910,21 +892,7 @@ box-shadow: 0 0 8px 0px #000;
     grid-column: span 2;
 }
 
-.Extra .box .hack{
-    width:50%;
-}
 
-.Extra .box .paper-publish{
-    width:50%;
-}
-
-.Extra .box .icarus{
-    width:50%;
-}
-
-.Extra .box .spectra{
-    width:30%;
-}
 
 .Extra .overlay-box,
 .Extra .overlay-box1{
