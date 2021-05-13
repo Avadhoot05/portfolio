@@ -3,10 +3,7 @@ let project_rows = document.querySelectorAll(".project-rows"); //element
 let overlay_box = document.querySelectorAll(".projects .overlay-box"); //element
 let togg = document.getElementById("tog");
 
-//-------------------start slider animation-------------------
-const tl = gsap.timeline({defaults:{ease:Power1.out}});
-tl.to('.slider',{y:"-100%", duration:0.5 ,delay:0.5});
-tl.to('.intro',{y:"-100%", duration:0.7 },"-=0.4");
+
 
 //--------------Custom Scroll bar
 $(window).scroll(function(){
