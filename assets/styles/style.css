@@ -36,24 +36,7 @@ html,body {
     width: 0;
 }
 
-.intro,
-.intro-mobile,
-.slider,
-.slider-mobile{
-    position: fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background-color: rgb(48, 48, 48);
-    z-index: 6;
-}
 
-.slider,
-.slider-mobile{
-    background-color: var(--secondary-color);
-    transform: translateY(155%);
-}
 
 .progressbar{
     position: fixed;
@@ -104,10 +87,7 @@ a{
     z-index:5;
 }
 
-.landing #tog{
-    width:2.2rem;
-    height: 2.2rem;
-}
+
 
 
 
@@ -147,8 +127,6 @@ a{
     .landing .ham-parent{
         display:block;
         position: fixed;
-        width:100%;
-        height:10%;
         top:0;
         right:0;
         z-index:5;
