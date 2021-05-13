@@ -24,7 +24,6 @@
                                 supported by Chrome, Edge, Opera and Firefox */
 }
 
-
 html,body {
     text-decoration: none;
     background-color:#18181a;
@@ -35,8 +34,6 @@ html,body {
 ::-webkit-scrollbar{
     width: 0;
 }
-
-
 
 .progressbar{
     position: fixed;

@@ -7,9 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
+    <meta name="description" content="Avadhoot Khedekar, Web developer who knows HTML, CSS, JavaScript, React and many more">
+    <meta name="author" content="Avadhoot Khedekar">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <meta property="og:title" content="Avadhoot's Portfolio- Mumbai, India"/>
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Avadhoot Khedekar, Web developer who knows HTML, CSS, JavaScript, React and many more" />
+    <meta property="og:site_name" content="Web Developer, Mumbai India. https://www.avadhoot-khedekar.netlify.app" />
+    <meta property="og:url" content="https://prashantsani.com/" />
+
+    
+
     <!-- Bootstrap CSS -->
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"> -->
 
+    <!-- ----------------------Critical CSS--------------------------------------- -->
     <style>
       .intro,
       .intro-mobile,
@@ -40,86 +54,72 @@
         unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
       }
 
-      
+      /* latin */
+      @font-face {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 300;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN_r8OUuhp.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
 
 
-/* latin */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN_r8OUuhp.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
+      /* latin */
+      @font-face {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v18/mem8YaGs126MiZpBA-UFVZ0b.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
 
 
-/* latin */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/opensans/v18/mem8YaGs126MiZpBA-UFVZ0b.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
+      /* latin */
+      @font-face {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UNirkOUuhp.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+      /* latin */
+      @font-face {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN7rgOUuhp.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
 
 
-/* latin */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UNirkOUuhp.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-/* latin */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN7rgOUuhp.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-
-/* latin */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 800;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN8rsOUuhp.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-
-    
+      /* latin */
+      @font-face {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 800;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN8rsOUuhp.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
     </style>
 
+    <link rel="icon" href="assets/media/icon.webp" sizes="16x16" type="image/webp">
     <link href="assets/styles/b.css" rel='stylesheet' type="text/css" >
     <link href="assets/styles/style.css" rel='stylesheet' type="text/css" >
 
-    <!--fonts
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">-->
-    
-    <!-- <link rel="stylesheet" href="assets/styles/oswald.css">
-    <link rel="stylesheet" href="assets/styles/opensans.css">  -->
-
-    <!-- <link href="mobile.css" rel="stylesheet" media="screen and (max-width: 600px)"> -->
-
-    
     <title>Avadhoot's Portfolio</title>
   </head>
 
   <body>
     <div class="intro"></div>
     <div class="slider"></div>
+
+    <!-- ----------------------Critical JS--------------------------------------- -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
     <script>
             //-------------------start slider animation-------------------
@@ -127,8 +127,8 @@
       tl.to('.slider',{y:"-100%", duration:0.5 ,delay:0.5});
       tl.to('.intro',{y:"-100%", duration:0.7 },"-=0.4");
     </script>
-    <div class="progressbar"></div>
 
+    <div class="progressbar"></div>
 
     <div class="container-fluid landing">
       <div class="row align-items-center">
@@ -145,8 +145,6 @@
           </div>
         </div>
 
-
-
         <div class="col-12 col-sm-6 col-lg-6 col-xl-6 navigation-bar" align="right">
           <a href="#projects-section">Projects</a>
           <a href="#skills_section">What I do</a>
@@ -159,16 +157,9 @@
         <a href="menu.html" class="ham"><div class="icon"><img alt="menu" loading="lazy"src="assets/media/Menu-Icon.webp"></div></a>
       </div>
 
-
       <img alt="Dark-mode switch" id="tog" loading="lazy"src="assets/media/sun.webp" aria-label="Switch to light/dark mode">
       
-
-
-      <!-- <button id="tog">toggle</button> -->
     </div>
-
-
-
 
   <!--------------------------------------Projects------------------------------------>
     <div class="container-fluid projects" id="projects-section">
@@ -178,7 +169,6 @@
         <div class="col-sm-8 col-md-6 col-lg-6">
             <div class="inner-box" id="here">
               <div class="overlay-box"></div>
-              
                 <a href="https://github.com/Avadhoot05/Notes_Classifier" target="_blank" rel="noopener noreferrer">
                   <h5><span><</span>Notes Classifier/></h5>
                   <p>A DNN trained using TensorFlow framework on custom dataset,
@@ -192,7 +182,6 @@
         <div class="col-sm-8 col-md-6 col-lg-6">
 			      <div class="inner-box">
 				      <div class="overlay-box"></div>
-              
                 <a href="https://github.com/Avadhoot05/MazeSolver" target="_blank" rel="noopener noreferrer">
                   <h5><span><</span>Maze Solver/></h5>
                   <p>An openCV-python script which accepts a maze in the image format and
@@ -205,11 +194,9 @@
       </div>
 
       <div class="row project-rows align-items-center" align="center" >
-
         <div class="col-sm-8 col-md-6 col-lg-6">
             <div class="inner-box">
               <div class="overlay-box"></div>
-              
                 <a href="https://github.com/Avadhoot05/Github-Locator.github.io" target="_blank" rel="noopener noreferrer" >
                   <h5><span><</span>Github Locator/></h5>
                   <p>A responsive webpage designed using HTML, CSS, Javascript. Provided username of the user, it fetches github profile along with 
@@ -224,73 +211,62 @@
 			      <div class="inner-box">
               <div class="overlay-box"></div>
               
-          <a href="https://language-identifier.herokuapp.com/" target="_blank" rel="noopener noreferrer">
-              <h5><span><</span>Language Identifier/></h5>
-              <p>It identifies five indian languages viz. English, Marathi, Hindi, Tamil, Gujrati. The ML model
-                is trained over 1000 examples and has accuracy upto 91% on test data. 
-              </p>
-              </a>
+                <a href="https://language-identifier.herokuapp.com/" target="_blank" rel="noopener noreferrer">
+                  <h5><span><</span>Language Identifier/></h5>
+                  <p>It identifies five indian languages viz. English, Marathi, Hindi, Tamil, Gujrati. The ML model
+                  is trained over 1000 examples and has accuracy upto 91% on test data. 
+                  </p>
+                </a>
             </div>
           </a>
         </div>
-        
       </div>
 
 	    <div class="row project-rows align-items-center" align="center">
         <div class="col-sm-8 col-md-6 col-lg-6">
             <div class="inner-box">
-              <div class="overlay-box"></div>
-              
-          <a href="https://github.com/Avadhoot05/Review-Detoxification" target="_blank" rel="noopener noreferrer">
-              <h5><span><</span>Review Detoxify/></h5>
-              <p>This project is built in Django which is integrated with a model trained on
-                Decision Tree algorithm and can classify a review into the six categories.</p>
+              <div class="overlay-box"></div>            
+                <a href="https://github.com/Avadhoot05/Review-Detoxification" target="_blank" rel="noopener noreferrer">
+                <h5><span><</span>Review Detoxify/></h5>
+                <p>This project is built in Django which is integrated with a model trained on
+                  Decision Tree algorithm and can classify a review into the six categories.</p>
                 </a>
             </div>
           </a>
         </div>
         
         <div class="col-sm-8 col-md-6 col-lg-6">
-          
             <div class="inner-box">
               <div class="overlay-box"></div>
               <a href="https://github.com/Avadhoot05/YOLO" target="_blank" rel="noopener noreferrer">
               <h5><span><</span>Object Localization App/></h5>
-            
               <p>An android application which can recognize the object in
                 real-time. It uses a model trained bytransfer learning technique having
                 tiny YOLOv3 as base NN.</p>
               </a>
-            </div>
-          
+            </div>  
         </div>
       </div>
-          </div>
+  </div>
 
     <!--------------------------------------Skills------------------------------------>
-    
     <div class="container-fluid skills" id="skills_section"> 
       <h1 class="heading">What I do</h1>
       <div class="row align-items-center" align="center">
-        
         <div class="col-sm-6 col-md-5 col-lg-5 image-parent">
           <div class="person">
             <span class="overlay"></span> 
             <img alt="My photo" loading="lazy" src="assets/media/person.webp">
           </div>
-          <!-- <img class="pentagon-main" src="assets/media/selft.png">
-          <img class="pentagon-move" src="assets/media/selft.png"> -->
+
           <div class="short-bio">
             <p>I like to develop the projects that are not so common and not directly available on internet. I prefer to 
             build them from scratch while having center of attention to create them appealing yet resource-efficient.</p>
-            <!-- <p>I always keep center of attention to create appealing yet resource-efficient projects. I usually perfer python for algorithms & DS,
-              Javascript for front-end developement and sklearn, tensorflow for ML development.</p> -->
           </div>
         </div>
 
         <div class="col-sm-6 col-md-7 col-lg-7 skill-col" >
-          
-            
+
             <hr class="line">
             <hr class="line">
             <hr class="line">
@@ -299,45 +275,41 @@
             <h6 class="label">Beginner</h6>
             <h6 class="label">Intermediate</h6>
             <h6 class="label">Expert</h6>
-            <h6 class="label"></h6>
           
             <div title="Python" class="skill-outer" style="height: 100%;">
-              
               <div class="skill-inner" style="height: 62%;"></div>
               <img alt="Python Logo" loading="lazy" src="https://img.icons8.com/color/48/000000/python.png"/>
             </div>
+
             <div title="Java" class="skill-outer" style="height: 100%;">
-              
               <div class="skill-inner" style="height: 49%;"></div>
               <img alt="java Logo" loading="lazy" src="https://img.icons8.com/color/48/000000/java-coffee-cup-logo.png"/>
             </div>
+
             <div title="HTML" class="skill-outer" style="height: 100%;">
-              
               <div class="skill-inner" style="height: 70%;"></div>
               <img alt="HTML Logo" loading="lazy" src="https://img.icons8.com/color/48/000000/html-5--v1.png"/>
             </div>
+
             <div title="C Prgramming" class="skill-outer" style="height: 100%;">
-              
               <div class="skill-inner" style="height: 72%;"></div>
               <img alt="C" loading="lazy"src="https://img.icons8.com/color/48/000000/c-programming.png"/>
             </div>
+
             <div title="Javascript" class="skill-outer" style="height: 100%;">
-              
               <div class="skill-inner" style="height: 55%;"></div>
               <img alt="Javascript" loading="lazy"src="https://img.icons8.com/color/48/000000/javascript.png"/>
             </div>
+
             <div title="Data structure & algorithms" class="skill-outer" style="height: 100%;">
-              
               <div class="skill-inner" style="height: 60%;"></div>
               <img alt="DSA" loading="lazy"src="https://img.icons8.com/doodle/48/000000/parallel-tasks--v1.png"/>
             </div>
+
             <div title="Tensorflow" class="skill-outer" style="height: 100%;">
-              
               <div class="skill-inner" style="height: 30%;"></div>
               <img alt="Tensorflow" loading="lazy"src="https://img.icons8.com/color/48/000000/tensorflow.png"/>
             </div>
-   
- 
         </div>
       </div>
     </div>
@@ -365,6 +337,7 @@
             <p><span>{</span> Front-end web development intern <span>}</span></p>
           </div>
         </div>
+
         <div class="box">
           <div class="content">
             <div class="overlay-box"></div>
@@ -381,6 +354,7 @@
             <p><span>{</span> President <span>}</span></p>
           </div>
         </div>
+        
         <div class="box">
           <div class="content">
             <div class="overlay-box"></div>
@@ -512,11 +486,7 @@
     </div>
 
   </div>
-
   </div>
-
-
-
   </div>
 
 
@@ -528,7 +498,6 @@
         <div class="col-12 col-sm-12 col-md-7 col-lg-5">
           <div class="form-container">
             <p class="form-desc">If you have any queries, feel free to connect with this form.<br><span><span><</span>Your details will not be shared anywhere<span>/></span></span></p>
-
 
             <form id="google-sheet">
               <input type="text" id="fname" name="fname" placeholder="First name" required>
@@ -597,17 +566,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/plugins/BezierPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/MotionPathPlugin.min.js"></script> -->
     <script defer src="assets/scripts/script.js"></script>
-
-    
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
   
   </body>
-
-
-
-
-
-
 </html>
 
     
