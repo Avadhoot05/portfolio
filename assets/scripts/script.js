@@ -1,31 +1,22 @@
-const labels = document.querySelectorAll(".label");
-const project_rows = document.querySelectorAll(".project-rows"); //element
-const overlay_box = document.querySelectorAll(".projects .overlay-box"); //element
-const togg = document.getElementById("tog");
 
-
+let project_rows = document.querySelectorAll(".project-rows"); //element
+let overlay_box = document.querySelectorAll(".projects .overlay-box"); //element
+let togg = document.getElementById("tog");
 
 //-------------------start slider animation-------------------
 const tl = gsap.timeline({defaults:{ease:Power1.out}});
 tl.to('.slider',{y:"-100%", duration:0.5 ,delay:0.5});
 tl.to('.intro',{y:"-100%", duration:0.7 },"-=0.4");
 
-
 //--------------Custom Scroll bar
 $(window).scroll(function(){
-    var scroll = $(window).scrollTop(),
-        dh = $(document).height(),
-        wh = $(window).height();
-
-        scrollPercent = (scroll/(dh-wh))*100;
-        
+    let scroll = $(window).scrollTop(),
+        scrollPercent = (scroll/($(document).height()-$(window).height()))*100;
         $('.progressbar').css('height',scrollPercent+'%')
 });
 
-
 //-------------------Dark Mode-------------------
 let darkflag = localStorage.getItem("darkflag");
-
 const enableDark=()=>{
     togg.src="../assets/media/moon.webp";
     document.body.classList.add("dark");
@@ -41,25 +32,18 @@ const disableDark=()=>{
 if(darkflag=='enabled'){
     enableDark();
 }
-
-togg.addEventListener("click",function(){
+togg.addEventListener("click",()=>{
     darkflag = localStorage.getItem("darkflag");
-    if(darkflag!='enabled'){
-        enableDark();
-    }
-    else{
-        disableDark();
-    }
+    if(darkflag!='enabled') enableDark();
+    else disableDark();
 });
 
 
 //---------------------Skills Graph horizotnal lines-----------------------
 document.querySelectorAll(".line").forEach((element,index)=>{
     element.style.bottom = `${index*25}%`;
-    labels[index].style.bottom = `${index*25.5+25}%`;
-
+    document.querySelectorAll(".label")[index].style.bottom = `${index*25.5+25}%`;
 });
-
 
 const opacityAnimation= (targetname,duration,easing,delay) =>{
     anime({
@@ -71,13 +55,10 @@ const opacityAnimation= (targetname,duration,easing,delay) =>{
     })
 }
 
-
 $(".desc").lettering();
 $(".short-bio p").lettering();
 
-
 opacityAnimation(".desc span",1000,'easeInSine',anime.stagger(10,{start:1000}))  //landing desc animation call
-
 
 var waypoint = new Waypoint({
     element:project_rows[0],
@@ -110,7 +91,6 @@ waypoint = new Waypoint({
 waypoint = new Waypoint({
     element: document.querySelector(".skills"),
     handler: function() {
-
         anime({
             targets: '.skills .overlay',
             translateX:1100,
@@ -119,23 +99,15 @@ waypoint = new Waypoint({
             duration:1000,
             easing: 'easeInSine'
         })
-
-
         opacityAnimation('.skills .person img',1500,'easeInSine',500) //person image animation
-
-
         opacityAnimation('.skills .short-bio span',1000,'easeInSine',anime.stagger(4,{start:1000})) //short bio
 
         document.querySelectorAll(".skill-inner").forEach((element,index) => {
             element.style.animation= `bottom-up 0.4s cubic-bezier(0.22, 0.61, 0.36, 1) ${index*0.08}s forwards`;
         }); 
-        
-
-
     },
     offset:400
 })
-
 
 waypoint = new Waypoint({
     element: document.querySelector(".Experience"),
@@ -146,10 +118,7 @@ waypoint = new Waypoint({
     },
     offset:600
 })
-
-
 /*---------------------------Form Submission-------------------------------*/
-
 var $form = $('form#google-sheet'),
     url = "https://script.google.com/macros/s/AKfycbzZLnHswcaH7vPS5S6wpa1I-wQxcIo0VKNHlIdYbR6pwxIVBYXzr_q77vUuncI2nn1f8Q/exec"
 
@@ -161,14 +130,10 @@ $('#sbmt').on('click', function(e) {
     [$('#fname').val(),$('#lname').val(),$('#email').val(),$('#message').val()].forEach((element,index)=> {
         if(element.length===0){
             ct+=1;
-            
             if(localStorage.getItem("darkflag")!='enabled') form_fields[index].style.outline = "1px solid #cf0061";
-            
             else form_fields[index].style.outline = "1px solid #9d86e9";
-            
         }
         else form_fields[index].style.outline = "none";
-        
     });
 
     if(ct) return false;

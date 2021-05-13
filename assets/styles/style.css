@@ -25,7 +25,6 @@
 }
 
 
-
 html,body {
     text-decoration: none;
     background-color:#18181a;
@@ -115,7 +114,6 @@ a{
 /*--------------mobile-------------------------*/
 @media all and (min-width: 350px) and (max-width: 700px){ /*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 
-    
     .navigation-bar{
         display:none;
     }
@@ -236,11 +234,11 @@ a{
 }
 
 .name-outer{
-    width:0;
-    height:130%;
+    height: 150%;
     background-color: var(--secondary-color);
     position:absolute;
-    animation:mainBlock 2s cubic-bezier(.74,.86,.4,.92) forwards 1s; 
+    top:0;
+    animation: mainBlock 2s cubic-bezier(.74,.86,.4,.92) forwards 1s; 
     z-index: 1;
 }
 
@@ -355,7 +353,7 @@ a{
 
 .skills .short-bio p{
     color:#fff;
-    font:normal normal 400 1rem 'Open Sans', sans-serif;
+    font:normal normal 300 1rem 'Open Sans', sans-serif;
     text-align: left;
     letter-spacing: 1px;
 }
@@ -439,7 +437,7 @@ a{
 .skills h6{
     position: absolute;
     display: inline;
-    font:normal normal 600 1.2rem 'Open Sans',Sans-serif;
+    font:normal normal 600 1.2rem 'Open Sans', sans-serif;
     right: 0%;
     color:var(--secondary-color);
     z-index: 1;
