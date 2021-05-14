@@ -55,7 +55,7 @@ const opacityAnimation= (targetname,duration,easing,delay) =>{
 $(".desc").lettering();
 $(".short-bio p").lettering();
 
-opacityAnimation(".desc span",1000,'easeInSine',anime.stagger(10,{start:1000}))  //landing desc animation call
+opacityAnimation(".desc span",500,'easeInSine',anime.stagger(10,{start:1000}))  //landing desc animation call
 
 var waypoint = new Waypoint({
     element:project_rows[0],
