@@ -1308,7 +1308,7 @@ body.dark .credit-container h6{
 }
 
 body.dark .skills .skill-outer h5,
-.techstack .techstack-grid .tools h5{
+body.dark .techstack .techstack-grid .tools h5{
     font-weight: 600;
     color: var(--heading-color-light);
 }
