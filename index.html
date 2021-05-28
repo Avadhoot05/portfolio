@@ -16,7 +16,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:description" content="Avadhoot Khedekar, Web developer who knows HTML, CSS, JavaScript, React and many more" />
     <meta property="og:site_name" content="Web Developer, Mumbai India. https://www.avadhoot-khedekar.netlify.app" />
-    <meta property="og:url" content="https://prashantsani.com/" />
+    
 
     
 
@@ -116,17 +116,7 @@
   </head>
 
   <body>
-    <div class="intro"></div>
-    <div class="slider"></div>
 
-    <!-- ----------------------Critical JS--------------------------------------- -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
-    <script>
-            //-------------------start slider animation-------------------
-      const tl = gsap.timeline({defaults:{ease:Power1.out}});
-      tl.to('.slider',{y:"-100%", duration:0.5 ,delay:0.1});
-      tl.to('.intro',{y:"-100%", duration:0.7 },"-=0.1");
-    </script>
 
     <div class="progressbar"></div>
 
@@ -153,12 +143,15 @@
           <a href="#contact-section">Contact</a>
         </div>
       </div>
+      
       <div class="ham-parent">
-        <a href="menu.html" class="ham"><div class="icon"><img alt="menu" loading="lazy"src="assets/media/Menu-Icon.webp"></div></a>
+        
+        <a href="menu.html" class="ham"><div class="icon"><img alt="menu" loading="lazy"src="assets/media/menu.webp" width="30px"></div></a>
       </div>
 
       <img alt="Dark-mode switch" id="tog" loading="lazy"src="assets/media/sun.webp" aria-label="Switch to light/dark mode">
       
+
     </div>
 
   <!--------------------------------------Projects------------------------------------>
@@ -278,42 +271,93 @@
             <h6 class="label"></h6>
           
             <div title="Python" class="skill-outer" style="height: 100%;">
-              <div class="skill-inner" style="height: 62%;"></div>
-              <img alt="Python Logo" loading="lazy" src="https://img.icons8.com/color/48/000000/python.png"/>
+              <div class="skill-inner" style="height: 70%;"></div>
+              <h5>Front-end Development</h5>
             </div>
 
             <div title="Java" class="skill-outer" style="height: 100%;">
-              <div class="skill-inner" style="height: 49%;"></div>
-              <img alt="java Logo" loading="lazy" src="https://img.icons8.com/color/48/000000/java-coffee-cup-logo.png"/>
+              <div class="skill-inner" style="height: 60%;"></div>
+              <h5>Back-end Development</h5>
             </div>
 
             <div title="HTML" class="skill-outer" style="height: 100%;">
-              <div class="skill-inner" style="height: 70%;"></div>
-              <img alt="HTML Logo" loading="lazy" src="https://img.icons8.com/color/48/000000/html-5--v1.png"/>
+              <div class="skill-inner" style="height: 65%;"></div>
+              <h5>Data Structures & Algorithms</h5>
             </div>
 
-            <div title="C Prgramming" class="skill-outer" style="height: 100%;">
-              <div class="skill-inner" style="height: 72%;"></div>
-              <img alt="C" loading="lazy"src="https://img.icons8.com/color/48/000000/c-programming.png"/>
-            </div>
-
-            <div title="Javascript" class="skill-outer" style="height: 100%;">
+            <div title="HTML" class="skill-outer" style="height: 100%;">
               <div class="skill-inner" style="height: 55%;"></div>
-              <img alt="Javascript" loading="lazy"src="https://img.icons8.com/color/48/000000/javascript.png"/>
+              <h5>ML / DL</h5>
             </div>
 
-            <div title="Data structure & algorithms" class="skill-outer" style="height: 100%;">
-              <div class="skill-inner" style="height: 60%;"></div>
-              <img alt="DSA" loading="lazy"src="https://img.icons8.com/doodle/48/000000/parallel-tasks--v1.png"/>
-            </div>
-
-            <div title="Tensorflow" class="skill-outer" style="height: 100%;">
-              <div class="skill-inner" style="height: 30%;"></div>
-              <img alt="Tensorflow" loading="lazy"src="https://img.icons8.com/color/48/000000/tensorflow.png"/>
-            </div>
+          
         </div>
       </div>
     </div>
+
+<!----------------------------------------Tech stack------------------------------------->   
+<div class="container-fluid techstack" id="techstack-section"> 
+  <h1 class="heading">Tech Stack</h1>
+  <div class="techstack-grid">
+    <div class="tools">
+      <img class="tool-img" loading="lazy" src="/assets/media/web/javascript.webp"/>
+      <h5>JavaScript</h5>
+    </div>
+    <div class="tools">
+      <img class="tool-img" loading="lazy" src="/assets/media/web/react.webp"/>
+      <h5>React</h5>
+    </div>
+    <div class="tools">
+      <img class="tool-img" loading="lazy" src="/assets/media/web/node.webp"/>
+      <h5>Node.js</h5>
+    </div>
+    <div class="tools">
+      <img class="tool-img" loading="lazy" src="/assets/media/web/bootstrap.webp"/>
+      <h5>Bootstrap</h5>
+    </div>
+    <div class="tools">
+      <img class="tool-img" loading="lazy" src="/assets/media/web/mongodb.webp"/>
+      <h5>MongoDB</h5>
+    </div>
+    <div class="tools">
+      <img class="tool-img" loading="lazy" src="/assets/media/web/MySQL.webp"/>
+      <h5>MySQL</h5>
+    </div>
+    <div class="tools">
+      <img class="tool-img" loading="lazy" src="/assets/media/web/python.webp"/>
+      <h5>Python</h5>
+    </div>
+    <div class="tools">
+      <img class="tool-img" loading="lazy" src="/assets/media/web/django.webp"/>
+      <h5>Django</h5>
+    </div>
+    <div class="tools">
+      <img class="tool-img" loading="lazy" src="/assets/media/web/flask.webp"/>
+      <h5>Flask</h5>
+    </div>
+    <div class="tools">
+      <img class="tool-img" loading="lazy" src="/assets/media/web/Git.webp"/>
+      <h5>Git</h5>
+    </div>
+    <div class="tools">
+      <img class="tool-img" loading="lazy" src="/assets/media/web/Java.webp"/>
+      <h5>Java</h5>
+    </div>
+    <div class="tools">
+      <img class="tool-img" loading="lazy" src="/assets/media/web/C.webp"/>
+      <h5>C</h5>
+    </div>
+    <div class="tools">
+      <img class="tool-img" loading="lazy" src="/assets/media/web/sklearn.webp"/>
+      <h5>Sklearn</h5>
+    </div>
+    <div class="tools">
+      <img class="tool-img" loading="lazy" src="/assets/media/web/wordpress.webp"/>
+      <h5>WordPress</h5>
+    </div>
+
+  </div> 
+</div>
 
 <!----------------------------------------Experience------------------------------------->
     <div class="container-fluid Experience" id="Experience-section">

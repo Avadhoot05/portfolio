@@ -1,8 +1,5 @@
 
 
-const tl = gsap.timeline({defaults:{ease:Power1.out}});
-tl.to('.intro-mobile',{y:"100%", duration:0.6 ,delay:0.5});
-tl.to('.slider-mobile',{y:"-100%", duration:0.8 },"-=0.4");
 
 let darkflag = localStorage.getItem("darkflag");
 

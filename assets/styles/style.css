@@ -20,15 +20,13 @@
     -khtml-user-select: none; /* Konqueror HTML */
     -moz-user-select: none; /* Old versions of Firefox */
     -ms-user-select: none; /* Internet Explorer/Edge */
-    user-select: none; /* Non-prefixed version, currently
-                                supported by Chrome, Edge, Opera and Firefox */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 }
 
 html,body {
     text-decoration: none;
     background-color:#18181a;
     transition: background-color 0.5s linear;
-    
 }
 
 ::-webkit-scrollbar{
@@ -362,9 +360,9 @@ a{
 .skills .skill-outer{
     position: relative;
     background-color: transparent;
-    width:10%;
+    width:15%;
     bottom:0%;
-    margin-right: 10px;
+    margin:0 10px;
    
     z-index:2;
 }
@@ -386,8 +384,7 @@ a{
 @keyframes bottom-up {
     100%{
         bottom:0;
-    }
-    
+    } 
 }
 
 .skills .image-parent{
@@ -395,8 +392,10 @@ a{
     margin-top: 1rem;
 }
 
-.skills .skill-outer img{
+.skills .skill-outer h5{
     margin-top:1rem;
+    font: normal normal 400 80% 'Open Sans', sans-serif;
+    color: var(--heading-color);
 }
 
 .skills hr{
@@ -409,6 +408,11 @@ a{
     background-color: rgb(173, 173, 173);
 }
 
+.skills hr:first-child{
+    height:3px;
+    background-color: #fff;
+}
+
 .skills h6{
     position: absolute;
     display: inline;
@@ -418,6 +422,8 @@ a{
     z-index: 1;
     margin:0;
 }
+
+
 
 
 
@@ -441,6 +447,10 @@ a{
         font-size: 2.6vw;
     }
 
+    .skills .skill-outer h5{
+        font-size:60% ;
+    }
+
 }
 
 
@@ -459,8 +469,108 @@ a{
 }
 
 
+/*-------------------------------Tech stack-------------------------------*/
+.techstack{
+    position: relative;
+    padding-top:7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
-/*-------------------------------Projects*/
+.techstack h1{
+    text-align: center;
+    text-transform: uppercase;
+    font:normal normal 800 2rem 'Open Sans', sans-serif;
+    color: var(--heading-shadow);
+    letter-spacing: 5px;
+}
+
+.techstack .techstack-grid{
+    display: grid;
+    max-width: 40vw;
+    padding-top: 2rem;
+    grid-template-columns: repeat(5,1fr);
+    grid-gap: 4vw;
+}
+
+.techstack .techstack-grid .tools{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.techstack .techstack-grid img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.6rem;
+    opacity: 0;
+    margin: auto;
+}
+
+.techstack .techstack-grid .tools h5{
+    font: normal normal 300 1vw 'Open Sans', sans-serif;
+    color: var(--heading-color);
+}
+
+@media all and (max-width: 700px){
+    .techstack .techstack-grid{
+        max-width: 70vw;
+    }
+
+    .techstack .techstack-grid .tools h5{
+        font-size: 2vw;
+    }
+}
+
+
+
+ @keyframes techstack-translate {
+    0%{
+        opacity: 0;
+        transform: perspective(10px) translateZ(-5px); 
+        filter:grayscale(100%); 
+    }
+
+    40%{
+        opacity: 0.5;
+        transform: perspective(10px) translateZ(1px) ;
+    }
+
+    60%{
+        
+        transform: perspective(10px) translateZ(0px);  
+        
+    }
+
+    75%{
+        transform: rotateZ(2deg);
+    }
+
+    90%{
+        opacity: 1;
+        transform: rotateZ(-2deg);
+        filter:grayscale(100%);
+    }
+
+
+    100%{
+        transform: rotateZ(0);
+        opacity: 1;
+        filter:grayscale(0);
+    }
+    
+} 
+
+
+
+
+
+
+
+/*-------------------------------Projects-------------------------------*/
 
 .projects{
     position: relative;
@@ -1197,6 +1307,11 @@ body.dark .credit-container h6{
     color:var(--heading-color-light);
 }
 
+body.dark .skills .skill-outer h5,
+.techstack .techstack-grid .tools h5{
+    font-weight: 600;
+    color: var(--heading-color-light);
+}
 
 body.dark .projects .inner-box:hover .overlay-box{
     background-color: var(--heading-shadow-light);

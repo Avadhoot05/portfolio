@@ -102,6 +102,21 @@ waypoint = new Waypoint({
         document.querySelectorAll(".skill-inner").forEach((element,index) => {
             element.style.animation= `bottom-up 0.4s cubic-bezier(0.22, 0.61, 0.36, 1) ${index*0.08}s forwards`;
         }); 
+
+        
+    },
+    offset:400
+})
+
+waypoint = new Waypoint({
+    element: document.querySelector(".techstack"),
+    handler: function() {
+
+        const stack = document.querySelectorAll(".techstack .tool-img")
+        stack.forEach((element,index) => {
+            element.style.animation= `techstack-translate 0.4s cubic-bezier(0.22, 0.61, 0.36, 1) ${index*0.15}s forwards`;
+        }); 
+
     },
     offset:400
 })
