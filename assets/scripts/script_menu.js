@@ -16,7 +16,7 @@ anime({
     opacity:1,
     duration:1000,
     easing:'easeInSine',
-    delay:anime.stagger(200,{start:1000})
+    delay:anime.stagger(30,{start:1000})
 })
 
 anime({
@@ -24,5 +24,5 @@ anime({
     opacity:1,
     duration:1000,
     easing:'easeInSine',
-    delay:anime.stagger(200,{start:1000})
+    delay:anime.stagger(30,{start:1000})
 })
