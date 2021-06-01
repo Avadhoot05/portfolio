@@ -14,7 +14,7 @@ else{
 anime({
     targets:'.close',
     opacity:1,
-    duration:1000,
+    duration:500,
     easing:'easeInSine',
     delay:anime.stagger(30,{start:1000})
 })
@@ -24,5 +24,5 @@ anime({
     opacity:1,
     duration:1000,
     easing:'easeInSine',
-    delay:anime.stagger(30,{start:1000})
+    delay:anime.stagger(100,{start:100})
 })
