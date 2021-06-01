@@ -15,13 +15,13 @@ $(window).scroll(function(){
 //-------------------Dark Mode-------------------
 let darkflag = localStorage.getItem("darkflag");
 const enableDark=()=>{
-    togg.src="../assets/media/moon.webp";
+    togg.src="../assets/media/moon.svg";
     document.body.classList.add("dark");
     localStorage.setItem('darkflag','enabled');
 }
 
 const disableDark=()=>{
-    togg.src="../assets/media/sun.webp";
+    togg.src="../assets/media/sun.svg";
     document.body.classList.remove("dark");
     localStorage.setItem('darkflag','disabled');
 }
