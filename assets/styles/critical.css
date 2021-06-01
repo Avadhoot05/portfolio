@@ -1,3 +1,27 @@
+:root{
+    --primary-color:#84dcc6;
+    --secondary-color:#cf0061;
+    --heading-color:#f0fff0;
+    --heading-shadow:#fca311;
+    --para-color:#c1fcff;
+
+    --primary-color-light: #9d86e9;
+    --heading-color-light:#2b2b2b;
+    --heading-shadow-light:#61dafb;
+}
+
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
 
 /* latin */
 @font-face {
