@@ -301,7 +301,6 @@ a{
     text-transform: uppercase;
     font: normal normal 800 4rem 'Open Sans', sans-serif;
     color:var(--heading-color);
-    text-shadow: 3px 4px var(--heading-shadow);
     letter-spacing: 5px;
     margin:0 0 3rem 0;
 }
@@ -585,7 +584,6 @@ a{
     text-transform: uppercase;
     font: normal normal 800 4rem 'Open Sans', sans-serif;
     color:var(--heading-color);
-    text-shadow: 3px 4px var(--heading-shadow);
     letter-spacing: 5px;
 }
 
@@ -784,7 +782,6 @@ a{
     text-transform: uppercase;
     font: normal normal 800 4rem 'Open Sans', sans-serif;
     color:var(--heading-color);
-    text-shadow: 3px 4px var(--heading-shadow);
     letter-spacing: 5px;
 }
 
@@ -987,7 +984,6 @@ box-shadow: 0 0 8px 0px #000;
     text-transform: uppercase;
     font: normal normal 800 4rem 'Open Sans', sans-serif;
     color:var(--heading-color);
-    text-shadow: 3px 4px var(--heading-shadow);
     letter-spacing: 3px;
 }
 
@@ -1288,9 +1284,6 @@ body.dark .heading{
     color: #3a3a3a;
 }
 
-body.dark .heading{
-    text-shadow: 3px 4px #ffbc4f;
-}
 
 body.dark .title .desc{
     font-weight: 400;
