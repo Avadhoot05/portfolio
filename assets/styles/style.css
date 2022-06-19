@@ -74,9 +74,9 @@ a {
 	display: none;
 }
 
-.landing #tog {
+#tog {
 	cursor: pointer;
-	position: absolute;
+	position: sticky;
 	transform: rotateZ(180deg);
 	top: 6%;
 	left: 5%;
