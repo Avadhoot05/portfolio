@@ -77,9 +77,12 @@ a {
 .landing #tog {
 	cursor: pointer;
 	position: absolute;
+	transform: rotateZ(180deg);
 	top: 6%;
 	left: 5%;
 	z-index: 5;
+	width: 30px;
+	height: 30px;
 }
 
 /*--------------mobile-------------------------*/
