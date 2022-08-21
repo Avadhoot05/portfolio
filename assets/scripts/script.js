@@ -21,7 +21,7 @@ const enableDark = () => {
 
 const disableDark = () => {
 	document.body.classList.remove('dark');
-	togg.src = '../assets/media/lightOff.png';
+	togg.src = '../assets/media/lightoff.png';
 	localStorage.setItem('darkflag', 'disabled');
 };
 
