@@ -1,0 +1,599 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta name="Personal Website">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    <meta name="description" content="Avadhoot Khedekar, Web developer who knows HTML, CSS, JavaScript, React and many more">
+    <meta name="author" content="Avadhoot Khedekar">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <meta property="og:title" content="Avadhoot's Portfolio- Mumbai, India"/>
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Avadhoot Khedekar, Web developer who knows HTML, CSS, JavaScript, React and many more" />
+    <meta property="og:site_name" content="Web Developer, Mumbai India. https://www.avadhoot-khedekar.netlify.app" />
+    
+
+    
+
+    <!-- Bootstrap CSS -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+
+    <!-- ----------------------Critical CSS--------------------------------------- -->
+    <style>
+
+      /* latin */
+      @font-face {
+        font-family: 'Oswald';
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/oswald/v36/TK3iWkUHHAIjg752GT8G.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+      /* latin */
+      @font-face {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 300;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN_r8OUuhp.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+
+      /* latin */
+      @font-face {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v18/mem8YaGs126MiZpBA-UFVZ0b.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      /* latin */
+      @font-face {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UNirkOUuhp.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+      /* latin */
+      @font-face {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN7rgOUuhp.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+      /* latin */
+      @font-face {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 800;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN8rsOUuhp.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+    </style>
+    
+
+    <link rel="icon" href="assets/media/icon.webp" sizes="16x16" type="image/webp">
+    <link href="assets/styles/b.css" rel='stylesheet' type="text/css" >
+    <link href="assets/styles/style.css" rel='stylesheet' type="text/css" >
+
+    <title>Avadhoot's Portfolio</title>
+  </head>
+
+  <body>
+
+
+    <div class="progressbar"></div>
+    <img title="Switch Dark/light mode" alt="Dark-mode switch" id="tog" loading="lazy" src="assets/media/lightOff.png" aria-label="Switch to light/dark mode">
+      
+    <div class="container-fluid landing">
+      <div class="row align-items-center">
+        <div class="col-12 col-sm-6 col-lg-6 col-xl-6 title" align="left">
+          <div class="title-name">
+            <!-- <div class="name-outer"></div> -->
+            <h1 class="name">AVADHOOT<span></span></h1>
+          </div>
+          <div>
+            <p class="desc">Hello!! I am a Software Engineer at <span class="company">Zeus Learning Pvt. Ltd.</span>
+            I brush up my coding skills by solving <br>algorithmic problems 
+            and develop interesting web applications.</p>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-6 col-xl-6 navigation-bar" align="right">
+          <a href="#projects-section">Projects</a>
+          <a href="#skills_section">What I do</a>
+          <a href="#Experience-section">Experience</a>
+          <a href="#Extras-section">Achievements..</a>
+          <a href="#contact-section">Contact</a>
+        </div>
+      </div>
+      
+      <div class="ham-parent">
+        
+        <a href="menu.html" class="ham"><div class="icon"><img alt="menu" loading="lazy"src="assets/media/menu.webp" width="30px"></div></a>
+      </div>
+    </div>
+
+  <!--------------------------------------Projects------------------------------------>
+    <div class="container-fluid projects" id="projects-section">
+      <h1 class="heading">Projects</h1>
+      <div class="row project-rows align-items-center" align="center">
+        
+        <div class="col-sm-8 col-md-6 col-lg-6">
+            <div class="inner-box" id="here">
+              <div class="overlay-box"></div>
+                <a href="https://github.com/Avadhoot05/Notes_Classifier" target="_blank" rel="noopener noreferrer">
+                  <h5><span><</span>Notes Classifier/></h5>
+                  <p>A DNN trained using TensorFlow framework on custom dataset,
+                    capable of segregating images, pdfs, videos into two categories viz.
+                    educational and non-educational</p>
+                </a>
+            </div>
+          </a>
+        </div>
+        
+        <div class="col-sm-8 col-md-6 col-lg-6">
+			      <div class="inner-box">
+				      <div class="overlay-box"></div>
+                <a href="https://github.com/Avadhoot05/MazeSolver" target="_blank" rel="noopener noreferrer">
+                  <h5><span><</span>Maze Solver/></h5>
+                  <p>An openCV-python script which accepts a maze in the image format and
+                  provides an optimal solution using the A* informed path finding algorithm.</p>
+                </a>
+            </div>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="row project-rows align-items-center" align="center" >
+        <div class="col-sm-8 col-md-6 col-lg-6">
+            <div class="inner-box">
+              <div class="overlay-box"></div>
+                <a href="https://github.com/Avadhoot05/Github-Locator.github.io" target="_blank" rel="noopener noreferrer" >
+                  <h5><span><</span>Github Locator/></h5>
+                  <p>A responsive webpage designed using HTML, CSS, Javascript. Provided username of the user, it fetches github profile along with 
+                     link to their repositories using Github's public API.
+                  </p>
+                </a>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-sm-8 col-md-6 col-lg-6">
+			      <div class="inner-box">
+              <div class="overlay-box"></div>
+              
+                <a href="https://language-identifier.herokuapp.com/" target="_blank" rel="noopener noreferrer">
+                  <h5><span><</span>Language Identifier/></h5>
+                  <p>It identifies five indian languages viz. English, Marathi, Hindi, Tamil, Gujrati. The ML model
+                  is trained over 1000 examples and has accuracy upto 91% on test data. 
+                  </p>
+                </a>
+            </div>
+          </a>
+        </div>
+      </div>
+
+	    <div class="row project-rows align-items-center" align="center">
+        <div class="col-sm-8 col-md-6 col-lg-6">
+            <div class="inner-box">
+              <div class="overlay-box"></div>            
+                <a href="https://github.com/Avadhoot05/Review-Detoxification" target="_blank" rel="noopener noreferrer">
+                <h5><span><</span>Review Detoxify/></h5>
+                <p>This project is built in Django which is integrated with a model trained on
+                  Decision Tree algorithm and can classify a review into the six categories.</p>
+                </a>
+            </div>
+          </a>
+        </div>
+        
+        <div class="col-sm-8 col-md-6 col-lg-6">
+            <div class="inner-box">
+              <div class="overlay-box"></div>
+              <a href="https://github.com/Avadhoot05/YOLO" target="_blank" rel="noopener noreferrer">
+              <h5><span><</span>Object Localization App/></h5>
+              <p>An android application which can recognize the object in
+                real-time. It uses a model trained bytransfer learning technique having
+                tiny YOLOv3 as base NN.</p>
+              </a>
+            </div>  
+        </div>
+      </div>
+  </div>
+
+    <!--------------------------------------Skills------------------------------------>
+    <div class="container-fluid skills" id="skills_section"> 
+      <h1 class="heading">What I do</h1>
+      <div class="row align-items-center" align="center">
+        <div class="col-sm-6 col-md-5 col-lg-5 image-parent">
+          <div class="person">
+            <span class="overlay"></span> 
+            <img alt="My photo" loading="lazy" src="assets/media/person.webp">
+          </div>
+
+          <div class="short-bio">
+            <p>I like to develop the projects that are not so common and not directly available on internet. I prefer to 
+            build them from scratch while having center of attention to create them appealing yet resource-efficient.</p>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-7 col-lg-7 skill-col" >
+
+            <hr class="line">
+            <hr class="line">
+            <hr class="line">
+            <hr class="line">
+
+            <h6 class="label">Beginner</h6>
+            <h6 class="label">Intermediate</h6>
+            <h6 class="label">Expert</h6>
+            <h6 class="label"></h6>
+          
+            <div  class="skill-outer" style="height: 100%;">
+              <div class="skill-inner" style="height: 70%;"></div>
+              <h5>Front-end Development</h5>
+            </div>
+
+            <div class="skill-outer" style="height: 100%;">
+              <div class="skill-inner" style="height: 60%;"></div>
+              <h5>Back-end Development</h5>
+            </div>
+
+            <div class="skill-outer" style="height: 100%;">
+              <div class="skill-inner" style="height: 65%;"></div>
+              <h5>Data Structures & Algorithms</h5>
+            </div>
+
+            <div class="skill-outer" style="height: 100%;">
+              <div class="skill-inner" style="height: 55%;"></div>
+              <h5>ML / DL</h5>
+            </div>
+
+          
+        </div>
+      </div>
+    </div>
+
+<!----------------------------------------Tech stack------------------------------------->   
+<div class="container-fluid techstack" id="techstack-section"> 
+  <h1 class="heading">Tech Stack</h1>
+  <div class="techstack-grid">
+    <div class="tools">
+      <img class="tool-img" loading="lazy" src="/assets/media/web/javascript.webp"/>
+      <h5>JavaScript</h5>
+    </div>
+    <div class="tools">
+      <img class="tool-img" loading="lazy" src="/assets/media/web/typescript.webp"/>
+      <h5>Typescript</h5>
+    </div>
+    <div class="tools">
+      <img class="tool-img" loading="lazy" src="/assets/media/web/cpp.webp"/>
+      <h5>C++</h5>
+    </div>
+    <div class="tools">
+      <img class="tool-img" loading="lazy" src="/assets/media/web/angular.webp"/>
+      <h5>Angular</h5>
+    </div>
+    <div class="tools">
+      <img class="tool-img" id="react-icon" loading="lazy" src="/assets/media/web/react.webp"/>
+      <h5>React</h5>
+    </div>
+    <div class="tools">
+      <img class="tool-img" loading="lazy" src="/assets/media/web/node.webp"/>
+      <h5>Node.js</h5>
+    </div>
+    <!-- <div class="tools">
+      <img class="tool-img" loading="lazy" src="/assets/media/web/bootstrap.webp"/>
+      <h5>Bootstrap</h5>
+    </div> -->
+    <div class="tools">
+      <img class="tool-img" loading="lazy" src="/assets/media/web/sass.webp"/>
+      <h5>Sass</h5>
+    </div>
+    <div class="tools">
+      <img class="tool-img" loading="lazy" src="/assets/media/web/mongodb.webp"/>
+      <h5>MongoDB</h5>
+    </div>
+    <div class="tools">
+      <img class="tool-img" loading="lazy" src="/assets/media/web/MySQL.webp"/>
+      <h5>MySQL</h5>
+    </div>
+    <div class="tools">
+      <img class="tool-img" loading="lazy" src="/assets/media/web/python.webp"/>
+      <h5>Python</h5>
+    </div>
+    <!-- <div class="tools">
+      <img class="tool-img" loading="lazy" src="/assets/media/web/django.webp"/>
+      <h5>Django</h5>
+    </div> 
+    <div class="tools">
+      <img class="tool-img" loading="lazy" src="/assets/media/web/C.webp"/>
+      <h5>C</h5>
+    </div> -->
+    <div class="tools">
+      <img class="tool-img" loading="lazy" src="/assets/media/web/java.webp"/>
+      <h5>Java</h5>
+    </div>
+    <div class="tools">
+      <img class="tool-img" loading="lazy" src="/assets/media/web/Git.webp"/>
+      <h5>Git</h5>
+    </div>
+  </div> 
+</div>
+
+<!----------------------------------------Experience------------------------------------->
+    <div class="container-fluid Experience" id="Experience-section">
+      <h1 class="heading">Experience</h1>
+
+      <div class="container">
+        <div class="box">
+          <div class="content">
+            <div class="overlay-box"></div>
+            <div class="overlay-box1">
+              <p>Worked on the front-end(HTML,CSS,JavaScript) and developed a website for
+                a digital marketing firm.</p>
+                <div>
+                  
+                  <a href="https://brandyse.com/" target="_blank" rel="noopener noreferrer"><button>Visit</button></a>
+                  <a href="https://drive.google.com/file/d/17AWNICAWlAYzl5_ZS7LelbzEF4hxF-Xx/view?usp=sharing" target="_blank" rel="noopener noreferrer"><button>LOR</button></a>
+                  <a href="https://drive.google.com/file/d/1qVwRW51YTt2XVxCoqAVOo4Mcn_pJ30Uj/view?usp=sharing" target="_blank" rel="noopener noreferrer"><button>Certificate</button></a>
+                </div>
+              </div>
+            <img alt="brandyse light" class="brandyse light" loading="lazy" src="assets/media/brandyse.webp">
+            <img alt="brandyse dark" class="brandyse dark" loading="lazy" src="assets/media/brandyse-dark.webp">
+            <p><span>{</span> Front-end web development intern <span>}</span></p>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="content">
+            <div class="overlay-box"></div>
+            <div class="overlay-box1">
+              <p>I was a vital part of the official Robotics team of our institute since Dec 2018 and served as President for the academic year 2020-21.
+                 I also lead a team of around 20 students for the competition ABU RoboCon 2021.
+              </p>
+              <div>
+                <a href="https://rgitsroboticsclub.com/" target="_blank" rel="noopener noreferrer"><button>Website</button></a>
+              </div>
+            </div>
+            <img alt="rrc light" class="rrc light"  loading="lazy" src="assets/media/rrc.webp">
+            <img alt="rrc dark" class="rrc dark" loading="lazy" src="assets/media/rrc-dark.webp">
+            <p><span>{</span> President <span>}</span></p>
+          </div>
+        </div>
+        
+        <div class="box">
+          <div class="content">
+            <div class="overlay-box"></div>
+            <div class="overlay-box1">
+              <p>Completed a Specialization in Deep Learning including 5 courses from Coursera. Through this I have gained knowledge of 
+                Artificial NN, Convolutional NN, hypertuning methods etc. Got hands on experience on TensorFlow.</p>
+                <a href="https://drive.google.com/file/d/1ZySyNkdypoVis9F-h0nG7freLdVnaD9x/view?usp=sharing" target="_blank" rel="noopener noreferrer"><button>Certificates</button></a>
+                
+            </div>
+            <img alt="dl light" class="dl light"  loading="lazy" src="assets/media/dl.webp">
+            <img alt="dl dark" class="dl dark" loading="lazy" src="assets/media/dl-dark.webp">
+            <p><span>{</span> Specialization in Deep Learning <span>}</span></p>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="content">
+            <div class="overlay-box"></div>
+            <div class="overlay-box1">
+              <p>Managed a workshop on Autonomous Quadruped Robot and taught arduino coding to the attendees.</p>
+              <!-- <button>Visit</button> -->
+            </div>
+            <img alt="Roborise-Logo" class="Roborise-Logo" loading="lazy" src="assets/media/Roborise Logo.webp">
+            <p><span>{</span> Technical management intern <span>}</span></p>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="content">
+            <div class="overlay-box"></div>
+            <div class="overlay-box1">
+              <p>Learnt about primitive data science libraries in python viz. pandas, numpy and more.   </p>
+              <a href="https://drive.google.com/file/d/1IxP3DC3iloVxLUEoZqDT8GFUDdvN436R/view?usp=sharing" target="_blank" rel="noopener noreferrer"><button>Certificate</button></a>
+            </div>
+            <img alt="LOGO of University of Michigan" class="umi" loading="lazy" src="assets/media/umi.webp">
+            <p><span>{</span> Introduction to Data-science <span>}</span></p>
+          </div>
+        </div>
+      </div>
+      
+      </div>
+
+
+<!----------------------------------------Extraas------------------------------------->
+<div class="container-fluid Experience Extra" id="Extras-section">
+  <h1 class="heading">Achievements & more</h1>
+
+  <div class="container">
+    <div class="box">
+      <div class="content">
+        <div class="overlay-box"></div>
+        <div class="overlay-box1">
+          <p> Our team RGIT's Robotics Club secured AIR 6 & AIR 7 in the stage 1 of DD RoboCon 2020 & 2021 respectively.</p>
+          </div>
+        <img alt="RoboCon Logo" class="brandyse light" loading="lazy" src="assets/media/ABU-Robocon-light.webp">
+        <img alt="RoboCon Logo" class="brandyse dark" loading="lazy" src="assets/media/ABU-Robocon.webp">
+      </div>
+    </div>
+    <div class="box">
+      <div class="content">
+        <div class="overlay-box"></div>
+        <div class="overlay-box1">
+          <p>To have a break from laptop's screen, I draw potraits</p>
+          <div class="button">
+            <a href="https://www.instagram.com/_avadhoot_k/" target="_blank" rel="noopener noreferrer"><div class="icon"><i class="fab fa-instagram"></i></div></a> 
+          </div>
+        </div>
+        <img alt="Sketch" class="rrc" loading="lazy" src="assets/media/sketch.webp">
+      </div>
+    </div>
+    <div class="box">
+      <div class="content">
+        <div class="overlay-box"></div>
+        <div class="overlay-box1">
+          <p>Achieved 5 stars in Problem Solving Section.</p>
+            <a href="https://www.hackerrank.com/khedekaravadhoot?badge=problem-solving&stars=5&level=3&hr_r=1&utm_campaign=social-buttons&utm_medium=linkedin&utm_source=badge_share_profile&social=linkedin" target="_blank" rel="noopener noreferrer"><button>Visit</button></a>
+            
+        </div>
+        <img alt="Hackerrank" class="dl light hack" loading="lazy" src="assets/media/hackerrank-light.webp">
+        <img alt="Hackerrank" class="dl dark hack" loading="lazy" src="assets/media/hackerrank-dark.webp">
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="content">
+        <div class="overlay-box"></div>
+        <div class="overlay-box1">
+          <p>Published a paper on depenedacy injection in Android.</p>
+          
+          <a href="https://www.ijraset.com/fileserve.php?FID=33608" target="_blank" rel="noopener noreferrer"><button>View</button></a>
+        </div>
+        <img alt="IJRASET" class="Roborise-Logo paper-publish" loading="lazy" src="assets/media/ijraset.webp">
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="content">
+        <div class="overlay-box"></div>
+        <div class="overlay-box1">
+          <p>Led an event in ICARUS 2019-technical fest of RGIT.</p>
+          <a href="https://drive.google.com/file/d/1E0kQur6kMCmMYH4_Lc5XZ8wrhMMJ-rc1/view?usp=sharing" target="_blank" rel="noopener noreferrer"><button>Certificate</button></a>
+        </div>
+        <img alt="ICARUS" class="umi icarus" loading="lazy" src="assets/media/Icarus.webp">
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="content">
+        <div class="overlay-box"></div>
+        <div class="overlay-box1">
+          <p>Participated in RECURSION 2021 hackathon and developed a working solution to predict car prices.</p>
+          <a href="https://drive.google.com/file/d/1_ScrRNx65UawCyFRRC0-neaXPO6bZI_N/view?usp=sharing" target="_blank" rel="noopener noreferrer"><button>Certificate</button></a>
+        </div>
+        <img alt="RECURSION Hackthon" class="umi light" loading="lazy" src="assets/media/recursion-light.webp">
+        <img alt="RECURSION Hackthon" class="umi dark" loading="lazy" src="assets/media/recursion-dark.webp">
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="content">
+        <div class="overlay-box"></div>
+        <div class="overlay-box1">
+          <p>Our team was among the top 10 teams in Maze Solver Robot Competition held at SPCE.</p>
+          <a href="https://drive.google.com/file/d/1CfA8SZusJBWKFstvmewtH-5zUX62FQLy/view?usp=sharing" target="_blank" rel="noopener noreferrer"><button>Certificate</button></a>
+        </div>
+        <img alt="SPECTRA" class="umi light spectra" loading="lazy" src="assets/media/spectra-dark.webp">
+        <img alt="SPECTRA" class="umi dark spectra" loading="lazy" src="assets/media/spectra-light.webp">
+      </div>
+    </div>
+
+  </div>
+  </div>
+  </div>
+
+
+      <!--------------------------------------contact us------------------------------------>
+    <div class="container-fluid contact" id="contact-section">
+      <h1 class="heading">Get in touch</h1>
+      
+      <div class="row  contact-rows justify-content-between" >
+        <div class="col-12 col-sm-12 col-md-7 col-lg-5">
+          <div class="form-container">
+            <p class="form-desc">If you have any queries, feel free to connect with this form.<br><span><span><</span>Your details will not be shared anywhere<span>/></span></span></p>
+
+            <form id="google-sheet">
+              <input type="text" id="fname" name="fname" placeholder="First name" required>
+              <input type="text" id="lname" name="lname" placeholder="Last name" required>
+              <input type="email" id="email" name="email" placeholder="Email address" required>
+              <textarea id="message" name="message" placeholder="Message" rows="4" cols="50" ></textarea>
+              <button id="sbmt">Send</button>
+            </form>
+            
+          </div>
+        </div>
+
+        <div class="col-8 col-sm-8 col-md-5 col-lg-5 resume-col">
+          <div class="resume-wrapper">
+            <p>Download my resume</p>
+              <a href="assets/media/Avadhoot Khedekar Resume.pdf" download><button class="resume">Resume<i class="fa fa-angle-double-right"></i></button></a>
+
+          </div>
+          <div class="wrapper">
+            <p>Visit my social handles to see more about<br> my work and hobbies...</p>
+            <div title="LinkedIn" class="button">
+              <a href="https://linkedin.com/in/avadhootkhedekar" target="_blank" rel="noopener noreferrer"><div class="icon"><i class="fab fa-linkedin"></i></div></a>
+            </div>
+            <div title="GitHub" class="button">
+              <a href="https://github.com/Avadhoot05/" target="_blank" rel="noopener noreferrer"><div class="icon"><i class="fab fa-github"></i></div></a>      
+            </div>
+            <div title="instagram" class="button">
+              <a href="https://www.instagram.com/_avadhoot_k/" target="_blank" rel="noopener noreferrer"><div class="icon"><i class="fab fa-instagram"></i></div></a>    
+            </div>
+            <div>
+              <p class="mail">Don't prefer forms?&nbsp;<a href="mailto:khedekaravadhoot@gmail.com">Email me</a></p>
+              
+            </div>
+            
+        </div>
+      </div>
+      </div>
+      <div class="credit-container">
+        <h6 class="end-credits">Hosted on <a href="https://www.netlify.com/" target="_blank" rel="noopener noreferrer">Netlify</a></h6>
+        <h6 class="end-credits">&nbsp;|&nbsp;Source code at <a href="https://github.com/Avadhoot05/portfolio" target="_blank" rel="noopener noreferrer">Github</a></h6>
+        <h6 class="end-credits">&nbsp;|&nbsp;Last updated on June 19, 2022</h6>
+      </div>
+      <p class="ack" style="margin-top:10px;">Hey, I got your message.</p>
+    </div>
+
+
+
+    <!----------------------------------scripts ans css------------------------------------------->
+    <link rel="icon" href="assets/media/icon.webp" sizes="16x16" type="image/webp">
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <!-- <link rel="stylesheet" href="assets/styles/font-awesome.css"> -->
+    
+    <script defer type="text/javascript" src="assets/scripts/jquery-1.7.1.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+    <script defer src="assets/scripts/jquery.serialize-object.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
+    <script defer src="assets/scripts/jquery.waypoints.min.js"></script>
+    <script defer src="assets/scripts/anime.min.js"></script>
+ 
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenLite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TimelineLite.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/plugins/CSSPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/plugins/BezierPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/MotionPathPlugin.min.js"></script> -->
+    <script defer src="assets/scripts/script.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  </body>
+</html>
+
+    
