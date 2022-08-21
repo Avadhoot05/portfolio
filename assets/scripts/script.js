@@ -14,33 +14,7 @@ let darkflag = localStorage.getItem('darkflag');
 
 //mode change flickering effect
 const enableDark = () => {
-	
 	document.body.classList.add('dark');
-
-	setTimeout(() => {
-		document.body.classList.remove('dark');	
-		togg.src = '../assets/media/lightOff.png';
-		setTimeout(() => {
-			document.body.classList.add('dark');	
-			togg.src = '../assets/media/light.png';
-			setTimeout(() => {
-				document.body.classList.remove('dark');	
-				togg.src = '../assets/media/lightOff.png';
-				setTimeout(() => {
-					document.body.classList.add('dark');
-					togg.src = '../assets/media/light.png';
-					setTimeout(() => {
-						document.body.classList.remove('dark');	
-						togg.src = '../assets/media/lightOff.png';
-						setTimeout(() => {
-							document.body.classList.add('dark');
-							togg.src = '../assets/media/light.png';	
-						}, 10);
-					}, 300);	
-				}, 30);
-			}, 30);
-		}, 30);
-	}, 20);
 	togg.src = '../assets/media/light.png';
 	localStorage.setItem('darkflag', 'enabled');
 };
