@@ -162,12 +162,6 @@ a {
 	transition: all 0.2s linear;
 }
 
-.title .name:hover {
-	display: inline-block;
-	transform: translate(-2px, -2px);
-	text-shadow: 3px 4px var(--secondary-color);
-}
-
 .title .desc {
 	padding-left: 1rem;
 	color: var(--para-color);
