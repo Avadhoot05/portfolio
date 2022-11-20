@@ -19,6 +19,7 @@
     
 
     
+    <link rel="icon" href="./assets/media/icon.webp" sizes="16x16" type="image/webp">
 
     <!-- Bootstrap CSS -->
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"> -->
@@ -96,26 +97,33 @@
   </head>
 
   <body>
+    <div id="mobile-nav" class="mobile-nav">
+      
+      <a class="item underline" href="#projects-section">Projects</a>
+      <a class="item underline" href="#skills_section">What I do</a>
+      <a class="item underline" href="#Experience-section">Experience</a>
+      <a class="item underline" href="#Extras-section">Achievements..</a>
+      <a class="item underline" href="#contact-section">Contact</a>
+      <img loading="lazy" class="closenav" src="./assets/media/web/closenav.webp" width="32" height="32"/> 
 
+    </div> 
 
     <div class="progressbar"></div>
-    <img width="60" height="60" title="Switch Dark/light mode" alt="Dark-mode switch" id="tog" loading="lazy" src="./assets/media/lightoff.png" aria-label="Switch to light/dark mode">
       
     <div class="container-fluid landing">
-      <div class="row align-items-center">
+      <div class="landing-content">
         <div class="col-12 col-sm-6 col-lg-6 col-xl-6 title" align="left">
           <div class="title-name">
-            <!-- <div class="name-outer"></div> -->
-            <h1 class="name">AVADHOOT<span></span></h1>
+            <p class="pre">Hi, my name is</p>
+            <h1 class="name">avadhoot&nbsp;k.</h1>
           </div>
           <div>
-            <p class="desc">Hello!! I am a Software Engineer at <span class="company">Zeus Learning Pvt. Ltd.</span>
-            I brush up my coding skills by solving <br>algorithmic problems 
-            and develop interesting web applications.</p>
+            <p class="desc">I'm a software engineer, currently builiding cloud-based products to enhance Learning Management Systems at <a class="underline company-name" href="https://www.zeuslearning.com/" target="_blank">Zeus Learning</a>.</p>
           </div>
         </div>
 
         <div class="col-12 col-sm-6 col-lg-6 col-xl-6 navigation-bar" align="right">
+          <a href="https://drive.google.com/file/d/1dr7yXsrxtIWae7We4FyWQwNaj0YfwxLR/view?usp=sharing" target="_blank">Resume</a>
           <a href="#projects-section">Projects</a>
           <a href="#skills_section">What I do</a>
           <a href="#Experience-section">Experience</a>
@@ -125,9 +133,11 @@
       </div>
       
       <div class="ham-parent">
-        
-        <a href="menu.html" class="ham"><div class="icon"><img alt="menu" loading="lazy"src="./assets/media/menu.webp" width="30px"></div></a>
+          <div class="icon ham">
+            <img alt="menu" loading="lazy" src="./assets/media/menu.webp" width="30">
+          </div>
       </div>
+
     </div>
 
   <!--------------------------------------Projects------------------------------------>
@@ -138,11 +148,11 @@
         <div class="col-sm-8 col-md-6 col-lg-6">
             <div class="inner-box" id="here">
               <div class="overlay-box"></div>
-                <a href="https://github.com/Avadhoot05/Notes_Classifier" target="_blank" rel="noopener noreferrer">
-                  <h5><span><</span>Notes Classifier/></h5>
-                  <p>A DNN trained using TensorFlow framework on custom dataset,
-                    capable of segregating images, pdfs, videos into two categories viz.
-                    educational and non-educational</p>
+                <a href="https://www.youtube.com/watch?v=2W5UXzU8kCs" target="_blank" rel="noopener noreferrer">
+                  <h5>&lt;Trackk My Money/></h5>
+                  <p>An expense tracker, helps to keep record of daily expenses. It supports CRUD operations along with multiple filters, file export, 
+                     monthly insights and realtime currency converter.
+                  </p>
                 </a>
             </div>
           </a>
@@ -152,7 +162,7 @@
 			      <div class="inner-box">
 				      <div class="overlay-box"></div>
                 <a href="https://github.com/Avadhoot05/MazeSolver" target="_blank" rel="noopener noreferrer">
-                  <h5><span><</span>Maze Solver/></h5>
+                  <h5>&lt;Maze Solver/></h5>
                   <p>An openCV-python script which accepts a maze in the image format and
                   provides an optimal solution using the A* informed path finding algorithm.</p>
                 </a>
@@ -167,7 +177,7 @@
             <div class="inner-box">
               <div class="overlay-box"></div>
                 <a href="https://github.com/Avadhoot05/Github-Locator.github.io" target="_blank" rel="noopener noreferrer" >
-                  <h5><span><</span>Github Locator/></h5>
+                  <h5>&lt;Github Locator/></h5>
                   <p>A responsive webpage designed using HTML, CSS, Javascript. Provided username of the user, it fetches github profile along with 
                      link to their repositories using Github's public API.
                   </p>
@@ -181,7 +191,7 @@
               <div class="overlay-box"></div>
               
                 <a href="https://language-identifier.herokuapp.com/" target="_blank" rel="noopener noreferrer">
-                  <h5><span><</span>Language Identifier/></h5>
+                  <h5>&lt;Language Identifier/></h5>
                   <p>It identifies five indian languages viz. English, Marathi, Hindi, Tamil, Gujrati. The ML model
                   is trained over 1000 examples and has accuracy upto 91% on test data. 
                   </p>
@@ -196,7 +206,7 @@
             <div class="inner-box">
               <div class="overlay-box"></div>            
                 <a href="https://github.com/Avadhoot05/Review-Detoxification" target="_blank" rel="noopener noreferrer">
-                <h5><span><</span>Review Detoxify/></h5>
+                <h5>&lt;Review Detoxify/></h5>
                 <p>This project is built in Django which is integrated with a model trained on
                   Decision Tree algorithm and can classify a review into the six categories.</p>
                 </a>
@@ -208,7 +218,7 @@
             <div class="inner-box">
               <div class="overlay-box"></div>
               <a href="https://github.com/Avadhoot05/YOLO" target="_blank" rel="noopener noreferrer">
-              <h5><span><</span>Object Localization App/></h5>
+              <h5>&lt;Object Localization App/></h5>
               <p>An android application which can recognize the object in
                 real-time. It uses a model trained bytransfer learning technique having
                 tiny YOLOv3 as base NN.</p>
@@ -234,7 +244,73 @@
           </div>
         </div>
 
-        <div class="col-sm-6 col-md-7 col-lg-7 skill-col" >
+        <div class="col-sm-6 col-md-7 col-lg-7 container-fluid techstack" id="techstack-section"> 
+          <!-- <h1 class="heading">Tech Stack</h1> -->
+          <div class="techstack-grid">
+            <div class="tools">
+              <img alt="javascript" class="tool-img" loading="lazy" src="./assets/media/web/javascript.webp"/>
+              <h5>JavaScript</h5>
+            </div>
+            <div class="tools">
+              <img alt="typescript" class="tool-img" loading="lazy" src="./assets/media/web/typescript.webp"/>
+              <h5>Typescript</h5>
+            </div>
+            <div class="tools">
+              <img alt="c-sharp" class="tool-img" loading="lazy" src="./assets/media/web/csharp.webp"/>
+              <h5>C#</h5>
+            </div>
+            <div class="tools">
+              <img alt="cpp" class="tool-img" loading="lazy" src="./assets/media/web/cpp.webp"/>
+              <h5>C++</h5>
+            </div>
+            <div class="tools">
+              <img alt="react" class="tool-img" id="react-icon" loading="lazy" src="./assets/media/web/react.webp"/>
+              <h5>React</h5>
+            </div>
+            <div class="tools">
+              <img alt="nodejs" class="tool-img" loading="lazy" src="./assets/media/web/node.webp"/>
+              <h5>Node.js</h5>
+            </div>
+            <!-- <div class="tools">
+              <img class="tool-img" loading="lazy" src="/assets/media/web/bootstrap.webp"/>
+              <h5>Bootstrap</h5>
+            </div> -->
+            <div class="tools">
+              <img alt="sass" class="tool-img" loading="lazy" src="./assets/media/web/sass.webp"/>
+              <h5>Sass</h5>
+            </div>
+            <div class="tools">
+              <img alt="mysql" class="tool-img" loading="lazy" src="./assets/media/web/MySQL.webp"/>
+              <h5>MySQL</h5>
+            </div>
+            <div class="tools">
+              <img alt="mongodb" class="tool-img" loading="lazy" src="./assets/media/web/mongodb.webp"/>
+              <h5>MongoDB</h5>
+            </div>
+            
+            <div class="tools">
+              <img alt="pyhon" class="tool-img" loading="lazy" src="./assets/media/web/python.webp"/>
+              <h5>Python</h5>
+            </div>
+            <!-- <div class="tools">
+              <img class="tool-img" loading="lazy" src="/assets/media/web/django.webp"/>
+              <h5>Django</h5>
+            </div> 
+            <div class="tools">
+              <img class="tool-img" loading="lazy" src="/assets/media/web/C.webp"/>
+              <h5>C</h5>
+            </div> -->
+            <div class="tools">
+              <img alt="java" class="tool-img" loading="lazy" src="./assets/media/web/Java.webp"/>
+              <h5>Java</h5>
+            </div>
+            <div class="tools">
+              <img alt="git" class="tool-img" loading="lazy" src="./assets/media/web/Git.webp"/>
+              <h5>Git</h5>
+            </div>
+          </div> 
+        </div>
+        <!-- <div class="col-sm-6 col-md-7 col-lg-7 skill-col" >
 
             <hr class="line">
             <hr class="line">
@@ -267,76 +343,12 @@
             </div>
 
           
-        </div>
+        </div> -->
       </div>
     </div>
 
 <!----------------------------------------Tech stack------------------------------------->   
-<div class="container-fluid techstack" id="techstack-section"> 
-  <h1 class="heading">Tech Stack</h1>
-  <div class="techstack-grid">
-    <div class="tools">
-      <img alt="javascript" class="tool-img" loading="lazy" src="./assets/media/web/javascript.webp"/>
-      <h5>JavaScript</h5>
-    </div>
-    <div class="tools">
-      <img alt="typescript" class="tool-img" loading="lazy" src="./assets/media/web/typescript.webp"/>
-      <h5>Typescript</h5>
-    </div>
-    <div class="tools">
-      <img alt="cpp" class="tool-img" loading="lazy" src="./assets/media/web/cpp.webp"/>
-      <h5>C++</h5>
-    </div>
-    <div class="tools">
-      <img alt="angular" class="tool-img" loading="lazy" src="./assets/media/web/angular.webp"/>
-      <h5>Angular</h5>
-    </div>
-    <div class="tools">
-      <img alt="react" class="tool-img" id="react-icon" loading="lazy" src="./assets/media/web/react.webp"/>
-      <h5>React</h5>
-    </div>
-    <div class="tools">
-      <img alt="nodejs" class="tool-img" loading="lazy" src="./assets/media/web/node.webp"/>
-      <h5>Node.js</h5>
-    </div>
-    <!-- <div class="tools">
-      <img class="tool-img" loading="lazy" src="/assets/media/web/bootstrap.webp"/>
-      <h5>Bootstrap</h5>
-    </div> -->
-    <div class="tools">
-      <img alt="sass" class="tool-img" loading="lazy" src="./assets/media/web/sass.webp"/>
-      <h5>Sass</h5>
-    </div>
-    <div class="tools">
-      <img alt="mongodb" class="tool-img" loading="lazy" src="./assets/media/web/mongodb.webp"/>
-      <h5>MongoDB</h5>
-    </div>
-    <div class="tools">
-      <img alt="mysql" class="tool-img" loading="lazy" src="./assets/media/web/MySQL.webp"/>
-      <h5>MySQL</h5>
-    </div>
-    <div class="tools">
-      <img alt="pyhon" class="tool-img" loading="lazy" src="./assets/media/web/python.webp"/>
-      <h5>Python</h5>
-    </div>
-    <!-- <div class="tools">
-      <img class="tool-img" loading="lazy" src="/assets/media/web/django.webp"/>
-      <h5>Django</h5>
-    </div> 
-    <div class="tools">
-      <img class="tool-img" loading="lazy" src="/assets/media/web/C.webp"/>
-      <h5>C</h5>
-    </div> -->
-    <div class="tools">
-      <img alt="java" class="tool-img" loading="lazy" src="./assets/media/web/Java.webp"/>
-      <h5>Java</h5>
-    </div>
-    <div class="tools">
-      <img alt="git" class="tool-img" loading="lazy" src="./assets/media/web/Git.webp"/>
-      <h5>Git</h5>
-    </div>
-  </div> 
-</div>
+
 
 <!----------------------------------------Experience------------------------------------->
     <div class="container-fluid Experience" id="Experience-section">
@@ -402,7 +414,7 @@
               <p>Managed a workshop on Autonomous Quadruped Robot and taught arduino coding to the attendees.</p>
               <!-- <button>Visit</button> -->
             </div>
-            <img alt="Roborise-Logo" class="Roborise-Logo" loading="lazy" src="./assets/media/Roborise Logo.webp">
+            <img alt="Roborise-Logo" class="Roborise-Logo" loading="lazy" src="./assets/media/Roborise_Logo.webp">
             <p><span>{</span> Technical management intern <span>}</span></p>
           </div>
         </div>
@@ -512,7 +524,6 @@
 
   </div>
   </div>
-  </div>
 
 
       <!--------------------------------------contact us------------------------------------>
@@ -541,8 +552,8 @@
               <a href="./assets/media/Avadhoot Khedekar Resume.pdf" download><button class="resume">Resume<i class="fa fa-angle-double-right"></i></button></a>
 
           </div>
-          <div class="wrapper">
-            <p>Visit my social handles to see more about<br> my work and hobbies...</p>
+        	<div class="wrapper">
+        		<p>Visit my social handles to know more about<br> my work and hobbies...</p>
             <div title="LinkedIn" class="button">
               <a aria-label="visit avadhoot's linkedin" href="https://linkedin.com/in/avadhootkhedekar" target="_blank" rel="noopener noreferrer"><div class="icon"><i class="fab fa-linkedin"></i></div></a>
             </div>
@@ -553,17 +564,15 @@
               <a aria-label="visit avadhoot's instgram" href="https://www.instagram.com/_avadhoot_k/" target="_blank" rel="noopener noreferrer"><div class="icon"><i class="fab fa-instagram"></i></div></a>    
             </div>
             <div>
-              <p class="mail">Don't prefer forms?&nbsp;<a href="mailto:khedekaravadhoot@gmail.com">Email me</a></p>
-              
+              <p class="mail">Don't prefer forms?&nbsp;<a class="underline" href="mailto:khedekaravadhoot@gmail.com">Email me</a></p>
             </div>
             
         </div>
       </div>
       </div>
       <div class="credit-container">
-        <h6 class="end-credits">Hosted on <a href="https://www.netlify.com/" target="_blank" rel="noopener noreferrer">Netlify</a></h6>
-        <h6 class="end-credits">&nbsp;|&nbsp;Source code at <a href="https://github.com/Avadhoot05/portfolio" target="_blank" rel="noopener noreferrer">Github</a></h6>
-        <h6 class="end-credits">&nbsp;|&nbsp;Last updated on June 19, 2022</h6>
+        <h6 class="end-credits">Source code at <a class="underline" href="https://github.com/Avadhoot05/portfolio" target="_blank" rel="noopener noreferrer">Github</a></h6>
+        <h6 class="end-credits">&nbsp;|&nbsp;Last updated on October 15, 2022</h6>
       </div>
       <p class="ack" style="margin-top:10px;">Hey, I got your message.</p>
     </div>
@@ -571,28 +580,16 @@
 
 
     <!----------------------------------scripts ans css------------------------------------------->
-    <link rel="icon" href="./assets/media/icon.webp" sizes="16x16" type="image/webp">
-
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
-    <!-- <link rel="stylesheet" href="assets/styles/font-awesome.css"> -->
     
     <script defer type="text/javascript" src="./assets/scripts/jquery-1.7.1.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
     <script defer src="./assets/scripts/jquery.serialize-object.min.js"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
     <script defer src="./assets/scripts/jquery.waypoints.min.js"></script>
     <script defer src="./assets/scripts/anime.min.js"></script>
- 
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script> -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.min.js"></script> -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenLite.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TimelineLite.min.js"></script> 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/plugins/CSSPlugin.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/plugins/BezierPlugin.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/MotionPathPlugin.min.js"></script> -->
     <script defer src="./assets/scripts/script.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
   
   </body>
 </html>
