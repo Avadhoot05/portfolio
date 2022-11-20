@@ -213,70 +213,6 @@ height: 45rem;
 display:block;
 }
 
-.title .name{
-text-transform: uppercase;
-color: #fff;
-font: normal normal 700 7vw 'Open Sans', sans-serif;
-line-height: 4.5rem;
-letter-spacing: 0.05rem;
-transition:all 0.2s linear;
-
-}
-
-.title .name:hover{
-display: inline-block;
-transform: translate(-2px,-2px) ;
-text-shadow: 3px 4px var(--secondary-color);
-
-}
-
-.title .desc{
-padding-left: 1rem;
-color: var(--para-color);
-font: normal normal 300 1rem 'Open Sans', sans-serif;
-letter-spacing: 0.1rem;  
-line-height: 1.5rem;
-position: absolute;
-top:0;
-width: inherit;
-height: inherit;
-}
-
-.title .desc span{
-opacity: 0;
-}
-
-.title>div:nth-child(2){
-position: relative;
-margin: 2rem 0;
-width: 28rem;
-height: 6rem;
-border-left: 2px solid var(--secondary-color);
-transition: all 1s cubic-bezier(0.22, 0.61, 0.36, 1);
-overflow-x: hidden;
-}
-
-.title-name{
-width:100%;
-position: relative;
-height: 100%;
-}
-
-.name-outer{
-height: 150%;
-background-color: var(--secondary-color);
-position:absolute;
-top:0;
-animation: mainBlock 2s cubic-bezier(.74,.86,.4,.92) forwards 1s; 
-z-index: 1;
-}
-
-.landing .name{
-color:#fff;
--webkit-animation: mainFadeIn 2s forwards 2.5s;
-animation: mainFadeIn 2s forwards 3s;
-opacity: 0;
-}
 
 @keyframes mainBlock {
 0%{
@@ -295,7 +231,17 @@ left:105%;
 } 
 }
 
-@keyframes mainFadeIn{
+@keyframes slideup {
+0%{
+transform: translateY(30px);
+opacity: 0;
+}
+
+60% {
+transform: translateY(0);
+opacity: 0.5;
+}
+
 100%{
 opacity: 1;
 }
@@ -336,53 +282,13 @@ padding-top: 32vh;
 
 
 @media all and (min-width: 767px) and (max-width: 1100px){
-.title .name{
-font-size:8.6vw;
-}
-}
-body.dark .intro,
-body.dark .intro-mobile{
-background-color: #303030;
+  .title .name{
+    font-size:8.6vw;
+  }
 }
 
-body.dark .slider,
-body.dark .slider-mobile,
-body.dark .name-outer,
-body.dark .skill-inner,
-body.dark .overlay-box{
-background-color: var(--primary-color-light);
-}
 
-body.dark,
-body.dark .ham-parent,
-body.dark html {
-background-color:#fff;
-}
-
-body.dark .navigation-bar a,
-body.dark .navigation-bar-mobile a,
-.Extra .svg-inline--fa,
-body.dark .contact .wrapper .button .icon .svg-inline--fa,
-body.dark .credit-container a,
-body.dark .contact .wrapper .mail a{
+.Extra .svg-inline--fa{
 color:var(--primary-color-light);
 }
 
-body.dark .navigation-bar a:hover,
-body.dark .projects h5{
-color: #000;
-}
-
-body.dark .name,
-body.dark .heading{
-color: #3a3a3a;
-}
-
-body.dark .heading{
-text-shadow: 3px 4px #ffbc4f;
-}
-
-body.dark .title .desc{
-font-weight: 400;
-color: #000;
-}

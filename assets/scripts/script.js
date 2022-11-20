@@ -1,44 +1,34 @@
 let project_rows = document.querySelectorAll('.project-rows'); //element
 let overlay_box = document.querySelectorAll('.projects .overlay-box'); //element
-let togg = document.getElementById('tog');
+const ham = document.getElementsByClassName("ham")[0];
+if(ham)
+	ham.addEventListener("click", onHamClick);
+
+function onHamClick(e) {
+	console.log("ham click");
+	let nav = document.getElementById("mobile-nav");
+	nav.style.right = "0px";
+	nav.style.top = window.scrollY + "px";
+	let closeNav = document.getElementsByClassName("closenav")[0];
+	closeNav.addEventListener("click", function() {
+		HideNav();
+	});
+}
+
+function HideNav()
+{
+	let nav = document.getElementById("mobile-nav");
+	nav.style.right = "-500px";
+}
 
 //--------------Custom Scroll bar
 $(window).scroll(function () {
+	
 	let scroll = $(window).scrollTop();
+	if(scroll > 0)
+		HideNav();
 	scrollPercent = (scroll / ($(document).height() - $(window).height())) * 100;
 	$('.progressbar').css('height', scrollPercent + '%');
-});
-
-//-------------------Dark Mode-------------------
-let darkflag = localStorage.getItem('darkflag');
-
-//mode change flickering effect
-const enableDark = () => {
-	document.body.classList.add('dark');
-	togg.src = '../assets/media/light.png';
-	localStorage.setItem('darkflag', 'enabled');
-};
-
-const disableDark = () => {
-	document.body.classList.remove('dark');
-	togg.src = '../assets/media/lightoff.png';
-	localStorage.setItem('darkflag', 'disabled');
-};
-
-if (darkflag == 'enabled') {
-	enableDark();
-}
-togg.addEventListener('click', () => {
-	darkflag = localStorage.getItem('darkflag');
-	if (darkflag != 'enabled') enableDark();
-	else disableDark();
-});
-
-
-//---------------------Skills Graph horizotnal lines-----------------------
-document.querySelectorAll('.line').forEach((element, index) => {
-	element.style.bottom = `${index * 25}%`;
-	document.querySelectorAll('.label')[index].style.bottom = `${index * 25.5 + 25}%`;
 });
 
 const opacityAnimation = (targetname, duration, easing, delay) => {
@@ -50,11 +40,6 @@ const opacityAnimation = (targetname, duration, easing, delay) => {
 		delay: delay,
 	});
 };
-
-$('.desc').lettering();
-$('.short-bio p').lettering();
-
-opacityAnimation('.desc span', 300, 'easeInSine', anime.stagger(5, { start: 1000 })); //landing desc animation call
 
 var waypoint = new Waypoint({
 	element: project_rows[0],
@@ -95,39 +80,29 @@ waypoint = new Waypoint({
 			duration: 1000,
 			easing: 'easeInSine',
 		});
-		opacityAnimation('.skills .person img', 1500, 'easeInSine', 500); //person image animation
-		opacityAnimation('.skills .short-bio span', 1000, 'easeInSine', anime.stagger(4, { start: 1000 })); //short bio
+		opacityAnimation('.skills .person img', 500, 'easeInSine', 100); //person image animation
+		document.getElementsByClassName("short-bio")[0].style.animation = "slideup 0.5s 0.5s forwards";
+		const stack = document.querySelectorAll('.techstack .tool-img');
+		stack.forEach((element, index) => {
 
-		document.querySelectorAll('.skill-inner').forEach((element, index) => {
-			element.style.animation = `bottom-up 0.4s cubic-bezier(0.22, 0.61, 0.36, 1) ${index * 0.08}s forwards`;
+			element.style.animation = "slideup 0.5s 0.1s forwards";
 		});
+		
 	},
 	offset: 400,
 });
 
 waypoint = new Waypoint({
-	element: document.querySelector('.techstack'),
-	handler: function () {
-		const stack = document.querySelectorAll('.techstack .tool-img');
-		stack.forEach((element, index) => {
-			element.style.animation = `techstack-translate 0.4s cubic-bezier(0.22, 0.61, 0.36, 1) 0s forwards`;
-		});
-	},
-	offset: 300,
-});
-
-waypoint = new Waypoint({
 	element: document.querySelector('.Experience'),
-	handler: function () {
+	handler: function () { 
 		opacityAnimation('.Experience .box', 100, 'linear', anime.stagger(150, { start: 200 }));
 	},
 	offset: 600,
 });
 
 
-//-----react button rotate------------
+//-----react icon  rotate------------
 const reactIcon = document.getElementById("react-icon");
-
 var angle = 0;
 
 setTimeout(() => {
@@ -142,9 +117,6 @@ setTimeout(() => {
 		angle++;
 	}, 30);
 }, 3000);
-
-
-
 
 
 

@@ -1,13 +1,10 @@
 :root {
-	--primary-color: #84dcc6;
+	--primary-color: #74ffdf;
 	--secondary-color: #cf0061;
 	--heading-color: #f0fff0;
 	--heading-shadow: #fca311;
 	--para-color: #c1fcff;
-
-	--primary-color-light: #7559d0;
-	--heading-color-light: #2b2b2b;
-	--heading-shadow-light: #61dafb;
+	--para-color-two: #EEEEEE;
 }
 
 * {
@@ -24,9 +21,11 @@
 
 html,
 body {
+	position: relative;
 	text-decoration: none;
 	background-color: #18181a;
 	transition: background-color 0.5s linear;
+	overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -43,6 +42,35 @@ body {
 	background-color: var(--secondary-color);
 }
 
+/* underline */
+.underline {
+	color: #fff;
+	text-decoration: none;
+	letter-spacing: 0;
+	display: inline-block;
+	position: relative;
+	padding-bottom: 2px;
+}
+
+.underline:after {    
+	background: none repeat scroll 0 0 transparent;
+	bottom: 0;
+	content: "";
+	display: block;
+	height: 1px;
+	left: 50%;
+	position: absolute;
+	background: var(--primary-color);
+	transition: width 0.1s ease 0s, left 0.1s ease 0s;
+	width: 0;
+}
+
+.underline:hover:after { 
+	width: 100%; 
+	left: 0; 
+}
+/* underline end */
+
 a {
 	text-decoration: none;
 }
@@ -50,21 +78,20 @@ a {
 .navigation-bar a,
 .navigation-bar-mobile a {
 	text-decoration: none;
-	text-transform: uppercase;
+	text-transform: capitalize;
 	display: block;
 	color: var(--primary-color);
 	margin-top: 0.5rem;
-	font: normal normal 500 2.6rem 'Oswald';
+	font: normal normal 700 2.6rem 'Open Sans';
 	transition-property: transform, background-color, border-right;
 	transition-duration: 200ms;
-	letter-spacing: 2px;
 	transition-timing-function: ease-in;
 }
 
 .navigation-bar a:hover {
 	transform: perspective(200px) rotateY(5deg);
-	border-right: 20px solid rgb(247, 247, 247);
-	background-color: rgb(216, 216, 216);
+	border-right: 20px solid var(--para-color-two);
+	background-color: var(--para-color-two);
 	padding: 0 0.5rem 0 0;
 	color: var(--secondary-color);
 }
@@ -74,19 +101,43 @@ a {
 	display: none;
 }
 
-#tog {
-	cursor: pointer;
-	position: sticky;
-	transform: rotateZ(180deg);
-	top: 6%;
-	left: 5%;
-	z-index: 5;
-	width: 30px;
-	height: 30px;
+
+/* Mobile Nav */
+.mobile-nav{
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	width: auto;
+	height: 100vh;
+	background-color: #212529;
+	right: -500px;
+	top: 0;
+	z-index: 47474747;
+	padding: 4rem 3rem;
 }
 
+.mobile-nav .item {
+	text-decoration: none;
+	color: var(--primary-color);
+	font: normal normal 600 1.5rem 'Open Sans';
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+}
+
+.closenav{
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	padding: 10px;
+	border-radius: 50%;
+	background-color: #84dcc60d;
+}
+
+/* mobile nav */
+
+
 /*--------------mobile-------------------------*/
-@media all and (min-width: 350px) and (max-width: 700px) {
+@media all and (min-width: 350px) and (max-width: 768px) {
 	/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 
 	.navigation-bar {
@@ -148,66 +199,73 @@ a {
 /*landing*/
 
 .landing {
-	padding: 25vh 5vw 0px;
+	padding: 25vh 7rem 0px;
 	height: 45rem;
 	display: block;
 }
 
+.landing-content{
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.pre {
+	color: var(--primary-color);
+	-webkit-animation: slideup 0.5s forwards 0.5s;
+	animation: slideup 0.5s forwards 0.5s;
+	opacity: 0;
+    font: normal normal 400 1rem 'Open Sans', sans-serif;
+    letter-spacing: 0px;
+    line-height: 1.5rem;
+	margin-bottom: 10px;
+}
+
 .title .name {
-	text-transform: uppercase;
+	text-transform: capitalize;
 	color: #fff;
-	font: normal normal 700 7vw 'Open Sans', sans-serif;
+	font: normal normal 700 6rem 'Open Sans', sans-serif;
 	line-height: 4.5rem;
-	letter-spacing: 0.05rem;
 	transition: all 0.2s linear;
+	color: #fff;
+	-webkit-animation: slideup 0.5s forwards 0.5s;
+	animation: slideup 0.5s forwards 0.5s;
+	opacity: 0;
 }
 
 .title .desc {
 	padding-left: 1rem;
-	color: var(--para-color);
-	font: normal normal 300 1rem 'Open Sans', sans-serif;
-	letter-spacing: 0.1rem;
+	color: #eeeeee;
+	font: normal normal 400 1rem 'Open Sans', sans-serif;
+	letter-spacing: 0;
 	line-height: 1.5rem;
 	position: absolute;
 	top: 0;
+	opacity: 0;
 	width: inherit;
 	height: inherit;
+	-webkit-animation: slideup 0.5s forwards 0.5s;
+	animation: slideup 0.5s forwards 0.5s;	
+	border-left: 2px solid var(--secondary-color);
 }
 
-.title .desc span {
-	opacity: 0;
+.company-name {
+	letter-spacing: 1px;
+	color: var(--primary-color);
 }
 
 .title > div:nth-child(2) {
 	position: relative;
 	margin: 2rem 0;
-	width: 28rem;
-	height: 6rem;
-	border-left: 2px solid var(--secondary-color);
-	transition: all 1s cubic-bezier(0.22, 0.61, 0.36, 1);
-	overflow-x: hidden;
+	width: 30rem;
+	height: auto;
 }
 
 .title-name {
 	width: 100%;
 	position: relative;
 	height: 100%;
-}
-
-.name-outer {
-	height: 150%;
-	background-color: var(--secondary-color);
-	position: absolute;
-	top: 0;
-	animation: mainBlock 2s cubic-bezier(0.74, 0.86, 0.4, 0.92) forwards 1s;
-	z-index: 1;
-}
-
-.landing .name {
-	color: #fff;
-	-webkit-animation: mainFadeIn 2s forwards 0.5s;
-	animation: mainFadeIn 2s forwards 0.5s;
-	opacity: 0;
+	overflow: visible;
 }
 
 @keyframes mainBlock {
@@ -227,8 +285,18 @@ a {
 	}
 }
 
-@keyframes mainFadeIn {
-	100% {
+@keyframes slideup {
+	0%{
+		transform: translateY(30px);
+		opacity: 0;
+	}
+
+	60% {
+		transform: translateY(0);
+		opacity: 0.5;
+	}
+
+	100%{
 		opacity: 1;
 	}
 }
@@ -247,12 +315,12 @@ a {
 
 	.title > div:nth-child(2) {
 		margin-top: 1.5rem;
-		width: 20rem;
+		width: auto;
 	}
 
 	.title .desc {
 		font-size: 0.9rem;
-		letter-spacing: 0.03rem;
+		letter-spacing: 0;
 		line-height: 1.7;
 	}
 
@@ -267,7 +335,11 @@ a {
 
 @media all and (min-width: 767px) and (max-width: 1100px) {
 	.title .name {
-		font-size: 8.6vw;
+		font-size: 4rem;
+	}
+
+	.navigation-bar a{
+		font-size: 2rem;
 	}
 }
 
@@ -277,15 +349,15 @@ a {
 	position: relative;
 	display: block;
 	width: 100%;
-	padding: 2rem 7rem 0 5rem;
+	padding: 2rem 7rem;
 	margin-top: 7rem;
 }
 
 .skills .heading {
-	text-transform: uppercase;
+	text-transform: capitalize;
 	font: normal normal 800 4rem 'Open Sans', sans-serif;
 	color: var(--heading-color);
-	letter-spacing: 5px;
+	letter-spacing: 2px;
 	margin: 0 0 3rem 0;
 }
 
@@ -293,29 +365,34 @@ a {
 	position: relative;
 	width: 250px;
 	height: 250px;
-	border-radius: 30px 0 30px 0;
+	border-radius: 3px;
 	overflow: hidden;
 	/* border: 5px solid #fff; */
 }
 
 .skills .person img {
+	border-radius: 4px;
 	filter: grayscale(100%);
 	opacity: 0;
 }
 
+.skills .person img:hover {
+	filter: grayscale(0);
+}
+
 .skills .short-bio {
 	padding: 2rem 3rem;
+	opacity: 0;
+
 }
 
 .skills .short-bio p {
 	color: #fff;
-	font: normal normal 300 1rem 'Open Sans', sans-serif;
+	font: normal normal 400 1rem 'Open Sans', sans-serif;
 	text-align: left;
-	letter-spacing: 1px;
-}
-
-.skills .short-bio span {
-	opacity: 0;
+	letter-spacing: 0;
+	/* -webkit-animation: slideup 0.5s forwards 0.5s;
+	animation: slideup 0.5s forwards 0.5s; */
 }
 
 .skills .person .overlay {
@@ -450,19 +527,10 @@ a {
 /*-------------------------------Tech stack-------------------------------*/
 .techstack {
 	position: relative;
-	padding-top: 7rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-}
-
-.techstack h1 {
-	text-align: center;
-	text-transform: uppercase;
-	font: normal normal 800 2rem 'Open Sans', sans-serif;
-	color: var(--heading-shadow);
-	letter-spacing: 5px;
 }
 
 .techstack .techstack-grid {
@@ -489,8 +557,8 @@ a {
 }
 
 .techstack .techstack-grid .tools h5 {
-	font: normal normal 300 1vw 'Open Sans', sans-serif;
-	color: var(--heading-color);
+	font: normal normal 400 1rem 'Open Sans', sans-serif;
+	color: var(--para-color-two);
 }
 
 @media all and (max-width: 700px) {
@@ -544,14 +612,14 @@ a {
 	width: 100%;
 	/*height: 60rem;*/
 	margin: 10rem 0 0 0;
-	padding: 2rem 5rem;
+	padding: 2rem 7rem;
 }
 
 .projects .heading {
-	text-transform: uppercase;
+	text-transform: capitalize;
 	font: normal normal 800 4rem 'Open Sans', sans-serif;
 	color: var(--heading-color);
-	letter-spacing: 5px;
+	letter-spacing: 2px;
 }
 
 .projects .inner-box {
@@ -559,7 +627,8 @@ a {
 	box-sizing: border-box;
 	width: 30vw;
 	height: 31vh;
-	border: 1px solid var(--primary-color);
+	outline: 1px solid var(--primary-color);
+	border-radius: 2px;
 	padding: 1rem 1rem 1rem 2rem;
 	margin: 4rem 0 0 0;
 	overflow: hidden;
@@ -577,8 +646,8 @@ a {
 
 .projects p {
 	position: relative;
-	font: normal normal 100 1.3vw 'Open Sans', sans-serif;
-	color: #fff;
+	font: normal normal 400 1rem 'Open Sans', sans-serif;
+	color: #eeeeee;
 	text-align: left;
 	z-index: 1;
 }
@@ -594,19 +663,15 @@ a {
 	transition: all 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
-.projects .inner-box:hover .overlay-box {
-	background-color: var(--secondary-color);
-}
-
 @keyframes right-to-left {
 	100% {
 		position: absolute;
-		left: -96%;
+		left: -105%;
 	}
 }
 
 @media all and (min-width: 350px) and (max-width: 576px) {
-	.projects {
+	.landing, .projects {
 		display: block;
 		padding: 2rem 1rem 0 1rem;
 		/* height: 120vh; */
@@ -634,10 +699,10 @@ a {
 	.projects h5 {
 		font-size: 1.7rem;
 	}
-
+/* 
 	.projects p {
 		font-size: 3.2vw;
-	}
+	} */
 }
 
 @media all and (min-width: 350px) and (max-width: 450px) {
@@ -658,9 +723,9 @@ a {
 		margin: 0 0 1rem 0;
 	}
 
-	.projects p {
+	/* .projects p {
 		font-size: 3.8vw;
-	}
+	} */
 }
 
 @media all and (min-width: 570px) and (max-width: 768px) {
@@ -681,9 +746,9 @@ a {
 		margin: 0 0 1rem 0;
 	}
 
-	.projects p {
+	/* .projects p {
 		font-size: 3.1vw;
-	}
+	} */
 }
 
 @media all and (min-width: 767px) and (max-width: 1100px) {
@@ -699,9 +764,9 @@ a {
 		margin: 0 0 1rem 0;
 	}
 
-	.projects p {
+	/* .projects p {
 		font-size: 1.7vw;
-	}
+	} */
 }
 
 @media all and (min-width: 580px) and (max-width: 1100px) {
@@ -726,14 +791,14 @@ a {
 	width: 100%;
 	/*height: 60rem;*/
 	margin: 11rem 0 0 0;
-	padding: 0 5rem;
+	padding: 0 7rem;
 }
 
 .Experience .heading {
-	text-transform: uppercase;
+	text-transform: capitalize;
 	font: normal normal 800 4rem 'Open Sans', sans-serif;
 	color: var(--heading-color);
-	letter-spacing: 5px;
+	letter-spacing: 2px;
 }
 
 .Experience .container {
@@ -904,15 +969,15 @@ a {
 	width: 100%;
 
 	margin: 3rem 0 0 0;
-	padding: 2rem 5rem;
+	padding: 2rem 7rem;
 }
 
 .contact .heading {
 	position: relative;
-	text-transform: uppercase;
+	text-transform: capitalize;
 	font: normal normal 800 4rem 'Open Sans', sans-serif;
 	color: var(--heading-color);
-	letter-spacing: 3px;
+	letter-spacing: 2px;
 }
 
 .contact-rows {
@@ -920,7 +985,7 @@ a {
 }
 
 .contact .form-desc span {
-	color: var(--secondary-color);
+	color: var(--para-color-two);
 }
 
 .contact .form-container {
@@ -983,8 +1048,8 @@ a {
 .contact p {
 	display: block;
 	color: var(--para-color);
-	font: normal normal 400 0.9rem 'Open Sans', sans-serif;
-	letter-spacing: 0.1rem;
+	font: normal normal 400 1rem 'Open Sans', sans-serif;
+    letter-spacing: 0px;
 	line-height: 1.5rem;
 	text-align: left;
 }
@@ -1000,6 +1065,11 @@ a {
 	background-color: transparent;
 	opacity: 0;
 	transition: opacity 0.5s linear;
+}
+
+.contact a {
+	letter-spacing: 0px;
+	color: var(--primary-color);
 }
 
 @keyframes highlight {
@@ -1050,6 +1120,7 @@ a {
 
 .contact button {
 	vertical-align: top;
+	border-radius: 4px;
 }
 
 .contact button:hover .svg-inline--fa {
@@ -1058,8 +1129,7 @@ a {
 
 .contact button:hover,
 .Experience button:hover {
-	border-color: #ffffff00;
-	outline: 1px solid var(--secondary-color);
+	background-color: #84dcc60d;
 }
 
 .wrapper {
@@ -1075,6 +1145,7 @@ a {
 	width: 60px;
 	margin: 10px 10px 0 0;
 	background-color: #24242491;
+	border-radius: 4px;
 	transition: outline 0.3s ease-out;
 }
 
@@ -1095,7 +1166,7 @@ a {
 }
 
 .contact .wrapper .button:hover {
-	outline: 1px solid var(--secondary-color);
+	background-color: #84dcc60d;
 }
 
 .contact .wrapper .mail {
@@ -1119,10 +1190,6 @@ a {
 	color: var(--primary-color);
 }
 
-.contact .end-credits a:hover,
-.contact .wrapper .mail a:hover {
-	color: var(--secondary-color);
-}
 
 @media all and (min-width: 350px) and (max-width: 765px) {
 	.resume-col {
@@ -1142,125 +1209,3 @@ a {
 	}
 }
 
-/*----------------Dark Mode---------------*/
-body.dark .intro,
-body.dark .intro-mobile {
-	background-color: #303030;
-}
-
-body.dark .slider,
-body.dark .slider-mobile,
-body.dark .name-outer,
-body.dark .skill-inner,
-body.dark .overlay-box {
-	background-color: var(--primary-color-light);
-}
-
-body.dark,
-body.dark .ham-parent,
-body.dark html {
-	background-color: #fff;
-}
-
-body.dark .navigation-bar a,
-body.dark .navigation-bar-mobile a,
-.Extra .svg-inline--fa,
-body.dark .contact .wrapper .button .icon .svg-inline--fa,
-body.dark .credit-container a,
-body.dark .contact .wrapper .mail a {
-	color: var(--primary-color-light);
-}
-
-body.dark .navigation-bar a:hover,
-body.dark .projects h5 {
-	color: #000;
-}
-
-body.dark .name,
-body.dark .heading {
-	color: #3a3a3a;
-}
-
-body.dark .title .desc {
-	font-weight: 400;
-	color: #000;
-}
-
-body.dark .skills .person img {
-	filter: grayscale(0);
-}
-
-body.dark .skills .short-bio p,
-body.dark .credit-container h6 {
-	color: var(--heading-color-light);
-}
-
-body.dark .skills .skill-outer h5,
-body.dark .techstack .techstack-grid .tools h5 {
-	font-weight: 600;
-	color: var(--heading-color-light);
-}
-
-body.dark .projects .inner-box:hover .overlay-box {
-	background-color: var(--heading-shadow-light);
-}
-
-body.dark .projects .inner-box {
-	border: 1px solid var(--primary-color-light);
-}
-
-body.dark .projects p {
-	color: rgb(61, 61, 61);
-}
-
-body.dark .Experience .box,
-body.dark .Experience .overlay-box1 {
-	background-color: rgb(247, 247, 247);
-}
-
-body.dark .Experience .dark {
-	display: block;
-}
-
-body.dark .Experience .light {
-	display: none;
-}
-
-body.dark .Experience .content p {
-	color: rgb(0, 30, 65);
-}
-
-body.dark button {
-	border: 1px solid var(--primary-color-light);
-	color: var(--primary-color-light);
-}
-
-body.dark .contact p {
-	color: #000;
-}
-
-body.dark .contact input,
-body.dark .contact textarea,
-body.dark .contact .wrapper .button {
-	background-color: rgba(249, 249, 249, 0.984);
-	color: var(--heading-color-light);
-}
-
-body.dark .contact input:focus,
-body.dark .contact textarea:focus {
-	border-left: 4px solid var(--heading-shadow-light);
-}
-
-body.dark .contact .wrapper .button:hover {
-	outline: 1px solid var(--secondary-color);
-}
-
-body.dark .contact button:hover,
-.Experience button:hover {
-	border-color: #ffffff00;
-	outline: 1px solid var(--secondary-color);
-}
-
-body.dark .contact .wrapper .mail a:hover {
-	color: var(--secondary-color);
-}
