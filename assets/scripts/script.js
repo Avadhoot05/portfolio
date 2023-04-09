@@ -45,7 +45,7 @@ const opacityAnimation = (targetname, duration, easing, delay) => {
 
 
 
-const overlayWidgets = ["project1", "project2", "project3", "zeus-content", "brandyse-content", "roborise-content", "rrc-content"];
+const overlayWidgets = ["zeus-content", "brandyse-content", "roborise-content", "rrc-content", "project1", "project2", "project3"];
 
 
 for(let i = 0; i < overlayWidgets.length; i++)
@@ -58,32 +58,6 @@ for(let i = 0; i < overlayWidgets.length; i++)
 		offset: 700,
 	});
 }
-
-// var waypoint = new Waypoint({
-// 	element: document.getElementById("project1"),
-// 	handler: function () {
-// 		overlay_box[0].style.animation = 'right-to-left 0.5s ease 0.1s forwards';
-// 	},
-// 	offset: 700,
-// });
-
-// var waypoint = new Waypoint({
-// 	element: document.getElementById("project2"),
-// 	handler: function () {
-// 		overlay_box[1].style.animation = 'right-to-left 0.5s ease 0.1s forwards';
-// 	},
-// 	offset: 700,
-// });
-
-// var waypoint = new Waypoint({
-// 	element: document.getElementById("project3"),
-// 	handler: function () {
-// 		overlay_box[2].style.animation = 'right-to-left 0.5s ease 0.1s forwards';
-// 	},
-// 	offset: 700,
-// });
-
-
 
 //-----------------------------------------------------------------------------------------
 
@@ -136,33 +110,4 @@ setTimeout(() => {
 	}, 30);
 }, 3000);
 
-/*---------------------------Form Submission-------------------------------*/
-// var $form = $('form#google-sheet'),
-// 	url = 'https://script.google.com/macros/s/AKfycbzZLnHswcaH7vPS5S6wpa1I-wQxcIo0VKNHlIdYbR6pwxIVBYXzr_q77vUuncI2nn1f8Q/exec';
 
-// $('#sbmt').on('click', function (e) {
-// 	e.preventDefault();
-
-// 	let form_fields = [document.querySelector('#fname'), document.querySelector('#lname'), document.querySelector('#email'), document.querySelector('#message')];
-// 	let ct = 0;
-// 	[$('#fname').val(), $('#lname').val(), $('#email').val(), $('#message').val()].forEach((element, index) => {
-// 		if (element.length === 0) {
-// 			ct += 1;
-// 			if (localStorage.getItem('darkflag') != 'enabled') form_fields[index].style.outline = '1px solid #cf0061';
-// 			else form_fields[index].style.outline = '1px solid #9d86e9';
-// 		} else form_fields[index].style.outline = 'none';
-// 	});
-
-// 	if (ct) return false;
-
-// 	form_fields.forEach((element) => {
-// 		element.style.outline = 'none';
-// 	});
-
-// 	var jqxhr = $.ajax({
-// 		url: url,
-// 		method: 'GET',
-// 		dataType: 'json',
-// 		data: $form.serializeObject(),
-// 	}).success((document.querySelector('.ack').style.opacity = '1'));
-// });
