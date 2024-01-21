@@ -215,6 +215,18 @@
           <h5>Java</h5>
         </div>
         <div class="tools">
+          <img alt="AWS EC2" class="tool-img" loading="lazy" src="./assets/media/web/ec2.webp"/>
+          <h5>AWS EC2</h5>
+        </div>
+        <div class="tools">
+          <img alt="AWS S3" class="tool-img" loading="lazy" src="./assets/media/web/s3.webp"/>
+          <h5>AWS S3</h5>
+        </div>
+        <div class="tools">
+          <img alt="WebRTC" class="tool-img" loading="lazy" src="./assets/media/web/webrtc.webp"/>
+          <h5>WebRTC</h5>
+        </div>
+        <div class="tools">
           <img alt="git" class="tool-img" loading="lazy" src="./assets/media/web/Git.webp"/>
           <h5>Git</h5>
         </div>
@@ -242,25 +254,27 @@
             <div class="duration">July 2021 - Present</div>
           </div>
             <ul class="desc">
-              <li>Enhanced <a class="underline company-name" href="https://www.annotate.net/" target="_blank">Annotate</a>, a Learning Management System, using JavaScript, C#, React, Node.js, PHP, and SQL with
-                proficiency in full-stack development, and effective collaboration within a team-oriented environment.</li>
+              <li>Enhanced <a class="underline company-name" href="https://www.annotate.net/" target="_blank">Annotate</a>, a Learning Management web application, with proficiency in full-stack development, and
+                effective collaboration within a team-oriented, agile-model driven environment.</li>
 
-              <li>Implemented a smooth migration of Google authorization process to Google Identity Services, ensuring seamless
-                access to user documents and enhancing user experience.</li>
+              <li>Ensured seamless access to documents with minimal user interaction by migrated Google Auth to Google Identity
+                Services, achieved by incorporating refresh token-based authorization.</li>
 
-              <li>Collaborated on developing a distributed and scalable architecture for a real-time packet transfer in a classroom
-                livestream feature, utilizing WebSocket.</li>
+              <li>Improved student engagement in the classroom by collaborating in development of a scalable architecture for a
+                livestream feature, utilizing WebSocket and Redis..</li>
 
-              <li>Integrated Annotate browser plugin with Google Classroom, leveraging JavaScript, React, Drive, and Classroom
-                APIs, improving grading for PDFs and ensuring seamless synchronization with the web app using PHP and Node.js.</li>
+              <li>Implemented live media streaming using the Janus WebRTC server. Utilized the Videoroom Janus plugin for audio
+                and video broadcasting, and employed the AudioBridge Janus plugin for audio conferencing.</li>
               
-              <li>Enhanced user experience in Canva by integrating the annotate plugin. Developed responsive slide-specific sticky
-                annotations with a save feature for multi-slide webpages.</li>
+              <li>Significantly increased Annotate utilization within Google Classroom by integrating a browser plugin through React
+                Typescript and Google REST APIs, enhancing the assignment system.</li>
 
-              <li>Achieved 40% reduction in api calls by optimizing the student work grading system through the implementation
-                of client-side caching and a document versioning system.</li>
-              
-              <li>Refactored sections of a legacy codebase, implementing a modular structure to enhance scalability and readability.</li>
+              <li>Increased annotate plugin usage on Canva by 60% through the development of responsive slide-specific sticky
+                annotations with a save feature for multi-slide webpages, resulting in enhanced user experience.</li>
+              <li>Achieved 40% reduction in API calls by optimizing the student work grading system through the implementation of
+                client-side caching and a document versioning system.</li>
+
+              <li>Refactored sections of a legacy codebase in C#, implementing a modular structure to enhance scalability.</li>
 
             </ul>
         </div>
@@ -314,7 +328,7 @@
             <h3 class="name">President</h3>
           </div>
           <div class="tags">
-            <div class="company">@ RGIT's Robotics Club</div>
+            <div class="company">@ <a target="_blank" href="https://www.linkedin.com/company/rgitsroboticsclub">RGIT's Robotics Club</a></div>
             <div class="duration">August 2020 - May 2021</div>
           </div>
             <ul class="desc">
@@ -352,7 +366,7 @@
           </div>
         </div>
           <h3 class="name">LeetCode</h3>
-          <p class="desc">Solved 300+ problems with highest contest rating of 1568 in 20+ weekly contests.</p>
+          <p class="desc">Solved 400+ problems with highest contest rating of 1600 in 40+ weekly contests.</p>
       </div>
     </div>
 
@@ -450,25 +464,33 @@
         <div class="head">
           <h3 class="name">ConvertZilla</h3>
           <div class="links">
-            <!-- <a target="_blank" title="ConvertZilla Demo Video" href="https://youtu.be/uAqHXnGlNuc">
-              <img  src="./assets/media/web/yt.webp" loading="lazy" alt="Maze solver Demo Video" width="20"> 
-            </a> -->
+            <a target="_blank" title="ConvertZilla Demo Video" href="https://www.youtube.com/watch?v=TISlelnAu5k&feature=youtu.be">
+              <img  src="./assets/media/web/yt.webp" loading="lazy" alt="ConvertZilla Demo Video" width="20"> 
+            </a>
             <a target="_blank" title="ConvertZilla GitHub Repository" href="https://github.com/Avadhoot05/media-reencode">
               <img  src="./assets/media/web/github.webp" loading="lazy" alt="ConvertZilla GitHub Repository" width="20"> 
+            </a>
+            <a target="_blank" title="ConvertZilla Live" href="http://ec2-54-90-108-68.compute-1.amazonaws.com:3000/">
+              <img src="./assets/media/web/external.webp" loading="lazy" alt="external" alt="ConvertZilla Live" width="20"> 
             </a>
           </div>
         </div>
           <ul class="desc">
-            <li>A web application for video processing tasks, developed with React, Express, and Node.js </li>
+            <li>Developed a web application for video processing tasks using React, TypeScript, Express, and Node.js.</li>
+            <li>Hosted the application on an AWS EC2 instance with video files stored in AWS S3.</li>
+            <li>Implemented test coverage using react-testing-library and Jest.</li>
             <li>Implemented a user-friendly interface to allow users to upload video files and select desired actions.</li>
             <li>Utilized Ffmpeg library to handle video processing tasks such as format conversion, compression, resolution change, and FPS adjustment.</li>
-            <li>Integrated WebSocket technology to provide real-time communication between the server and the client-side, keeping the users informed about the processing state.</li>
+            <li>Integrated WebSocket to provide real-time progress updates during video processing</li>
           </ul>
           <ul class="tech">
-            <li>React</li>
+            <li>React TypeScript</li>
             <li>Node.js</li>
             <li>FFmpeg</li>
             <li>websocket</li>
+            <li>AWS EC2</li>
+            <li>AWS S3</li>
+            <li>Jest</li>
           </ul>
         </div>
       </div> 
@@ -581,7 +603,7 @@
       </div>
       <div class="credit-container">
         <h6 class="end-credits">Source code at <a class="underline" href="https://github.com/Avadhoot05/portfolio" target="_blank" rel="noopener noreferrer">Github</a></h6>
-        <h6 class="end-credits">&nbsp;|&nbsp;Last updated on June 24, 2023</h6>
+        <h6 class="end-credits">&nbsp;|&nbsp;Last updated on January 21, 2024</h6>
       </div>
       <p class="ack" style="margin-top:10px;">Hey, I got your message.</p>
     </div>
