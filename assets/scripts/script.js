@@ -45,7 +45,7 @@ const opacityAnimation = (targetname, duration, easing, delay) => {
 
 
 
-const overlayWidgets = ["zeus-content", "brandyse-content", "roborise-content", "rrc-content", "project1", "project2", "project3", "project4"];
+const overlayWidgets = ["zeus-content", "brandyse-content", "rrc-content", "project1", "project2", "project3", "project4"];
 
 
 for(let i = 0; i < overlayWidgets.length; i++)
