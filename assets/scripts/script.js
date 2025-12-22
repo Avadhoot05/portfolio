@@ -111,3 +111,90 @@ setTimeout(() => {
 }, 3000);
 
 
+const SNOW_DENSITY = 60;  
+const SNOW_DURATION = 4000; 
+
+const snowContainer = document.getElementById("snow-container");
+
+if (snowContainer) {
+	const landing = document.querySelector(".landing");
+	let snowInterval;
+
+	function spawnFlake() {
+		const flake = document.createElement("span");
+		flake.className = "snowflake";
+
+		const size = Math.random() * 4 + 2;
+		const fallDuration = Math.random() * 1.5 + 1.5;
+
+		flake.style.width = `${size}px`;
+		flake.style.height = `${size}px`;
+		flake.style.left = `${Math.random() * 100}%`;
+		flake.style.animationDuration = `${fallDuration}s`;
+		flake.style.opacity = Math.random() * 0.5 + 0.3;
+
+		snowContainer.appendChild(flake);
+
+		// Cleanup after fall completes
+		setTimeout(() => flake.remove(), fallDuration * 1000);
+	}
+
+	// Spawn continuously
+	snowInterval = setInterval(() => {
+		for (let i = 0; i < SNOW_DENSITY / 10; i++) {
+			spawnFlake();
+		}
+	}, 100);
+
+	// Stop snow after duration
+	setTimeout(() => {
+		clearInterval(snowInterval);
+		setTimeout(() => {
+			snowContainer.innerHTML = "";
+		}, 2000);
+	}, SNOW_DURATION);
+}
+
+// --- Christmas Toast Notification ---
+    function showChristmasToast() {
+        const toast = document.createElement("div");
+        toast.innerText = "🎄 Merry Christmas 🎄";
+        
+        // Inline styling for the toast
+        Object.assign(toast.style, {
+            position: "fixed",
+            bottom: "30px",
+            left: "50%",
+            transform: "translateX(-50%) translateY(100px)",
+            backgroundColor: "#cf0061", // Using your secondary-color
+            color: "white",
+            padding: "12px 24px",
+            borderRadius: "5px",
+            boxShadow: "0 4px 15px rgba(0,0,0,0.3)",
+            zIndex: "1000",
+            fontFamily: "inherit",
+            fontWeight: "bold",
+            transition: "transform 0.5s ease-out, opacity 0.5s ease-out",
+            opacity: "0",
+            pointerEvents: "none"
+        });
+
+        document.body.appendChild(toast);
+
+        // Trigger animation
+        setTimeout(() => {
+            toast.style.transform = "translateX(-50%) translateY(0)";
+            toast.style.opacity = "1";
+        }, 1000);
+
+        // Remove after 5 seconds
+        setTimeout(() => {
+            toast.style.opacity = "0";
+            toast.style.transform = "translateX(-50%) translateY(20px)";
+            setTimeout(() => toast.remove(), 500);
+        }, 5000);
+    }
+
+    // Trigger the toast on load
+    showChristmasToast();
+

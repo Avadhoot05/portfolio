@@ -226,6 +226,7 @@ a {
 	-webkit-animation: slideup 0.5s forwards 0.5s;
 	animation: slideup 0.5s forwards 0.5s;
 	opacity: 0;
+	margin-top: calc(1.5rem + 10px);
 }
 
 .title .desc {
@@ -1150,4 +1151,92 @@ a {
 		align-items: center;
 	}
 }
+
+
+/* Festives */
+/* Christmas hat on first letter A (no text split) */
+.title .name {
+	position: relative;
+}
+
+.title .name::before {
+	content: "";
+	position: absolute;
+	top: -28px;
+	left: -25px;
+	width: 75px;
+	height: 75px;
+	background: url("../media/web/christmas-hat.webp") no-repeat center/contain;
+	transform: rotate(-20deg);
+	pointer-events: none;
+	z-index: 5;
+}
+
+@keyframes hat-bounce {
+	0%, 100% { transform: rotate(-20deg) translateY(0); }
+	50% { transform: rotate(-20deg) translateY(-4px); }
+}
+
+.title .name::before {
+	animation: hat-bounce 2s ease-in-out infinite;
+}
+
+/* Mobile responsiveness */
+@media all and (min-width: 350px) and (max-width: 576px) {
+	.title .name::before {
+		width: 45px;
+		height: 45px;
+		top: -2px;
+		left: -15px;
+	}
+}
+
+@media all and (min-width: 767px) and (max-width: 1100px) {
+	.title .name::before {
+		width: 45px;
+		height: 45px;
+		top: -6px;
+		left: -14px;
+	}
+}
+
+/* Snow container */
+#snow-container {
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+	overflow: hidden;
+	z-index: 3;
+}
+
+/* Snowflake */
+.snowflake {
+	position: absolute;
+	top: -10px;
+	background: white;
+	border-radius: 50%;
+	opacity: 0.8;
+	animation-name: snow-fall;
+	animation-timing-function: linear;
+	will-change: transform;
+}
+
+/* Falling animation */
+@keyframes snow-fall {
+	from {
+		transform: translateY(0);
+	}
+	to {
+		transform: translateY(120vh);
+	}
+}
+
+
+
+/* Optional: Slight random horizontal drift for falling flakes */
+@keyframes fall-drift {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(15px, 100vh); }
+}
+
 
