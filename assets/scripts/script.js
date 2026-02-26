@@ -45,7 +45,7 @@ const opacityAnimation = (targetname, duration, easing, delay) => {
 
 
 
-const overlayWidgets = ["zeus-content", "brandyse-content", "rrc-content", "project1", "project2", "project3", "project4"];
+const overlayWidgets = ["volytica-content", "zeus-content1", "zeus-content2", "brandyse-content", "project1", "project2", "project3", "project4"];
 
 
 for(let i = 0; i < overlayWidgets.length; i++)
@@ -109,48 +109,3 @@ setTimeout(() => {
 		angle++;
 	}, 30);
 }, 3000);
-
-
-const SNOW_DENSITY = 60;  
-const SNOW_DURATION = 4000; 
-
-const snowContainer = document.getElementById("snow-container");
-
-if (snowContainer) {
-	const landing = document.querySelector(".landing");
-	let snowInterval;
-
-	function spawnFlake() {
-		const flake = document.createElement("span");
-		flake.className = "snowflake";
-
-		const size = Math.random() * 4 + 2;
-		const fallDuration = Math.random() * 1.5 + 1.5;
-
-		flake.style.width = `${size}px`;
-		flake.style.height = `${size}px`;
-		flake.style.left = `${Math.random() * 100}%`;
-		flake.style.animationDuration = `${fallDuration}s`;
-		flake.style.opacity = Math.random() * 0.5 + 0.3;
-
-		snowContainer.appendChild(flake);
-
-		// Cleanup after fall completes
-		setTimeout(() => flake.remove(), fallDuration * 1000);
-	}
-
-	// Spawn continuously
-	snowInterval = setInterval(() => {
-		for (let i = 0; i < SNOW_DENSITY / 10; i++) {
-			spawnFlake();
-		}
-	}, 100);
-
-	// Stop snow after duration
-	setTimeout(() => {
-		clearInterval(snowInterval);
-		setTimeout(() => {
-			snowContainer.innerHTML = "";
-		}, 2000);
-	}, SNOW_DURATION);
-}

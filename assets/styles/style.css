@@ -226,7 +226,6 @@ a {
 	-webkit-animation: slideup 0.5s forwards 0.5s;
 	animation: slideup 0.5s forwards 0.5s;
 	opacity: 0;
-	margin-top: calc(1.5rem + 10px);
 }
 
 .title .desc {
@@ -358,8 +357,6 @@ a {
 
 .skills .person {
 	position: relative;
-	width: 250px;
-	height: 250px;
 	border-radius: 3px;
 	overflow: hidden;
 	/* border: 5px solid #fff; */
@@ -367,13 +364,9 @@ a {
 
 .skills .person img {
 	border-radius: 4px;
-	filter: grayscale(100%);
 	opacity: 0;
 }
 
-.skills .person img:hover {
-	filter: grayscale(0);
-}
 
 .skills .short-bio {
 	padding: 2rem 0;
@@ -389,15 +382,7 @@ a {
 	animation: slideup 0.5s forwards 0.5s; */
 }
 
-.skills .person .overlay {
-	position: absolute;
-	top: 0;
-	left: -100%;
-	width: 100%;
-	height: 100%;
-	background-color: var(--secondary-color);
-	z-index: 10;
-}
+
 
 .skills .image-parent {
 	position: relative;
@@ -1153,9 +1138,9 @@ a {
 }
 
 
-/* Festives */
+/* Festives
 /* Christmas hat on first letter A (no text split) */
-.title .name {
+/* .title .name {
 	position: relative;
 }
 
@@ -1181,7 +1166,6 @@ a {
 	animation: hat-bounce 2s ease-in-out infinite;
 }
 
-/* Mobile responsiveness */
 @media all and (min-width: 350px) and (max-width: 576px) {
 	.title .name::before {
 		width: 45px;
@@ -1200,7 +1184,6 @@ a {
 	}
 }
 
-/* Snow container */
 #snow-container {
 	position: absolute;
 	inset: 0;
@@ -1209,7 +1192,6 @@ a {
 	z-index: 3;
 }
 
-/* Snowflake */
 .snowflake {
 	position: absolute;
 	top: -10px;
@@ -1221,7 +1203,6 @@ a {
 	will-change: transform;
 }
 
-/* Falling animation */
 @keyframes snow-fall {
 	from {
 		transform: translateY(0);
@@ -1233,10 +1214,9 @@ a {
 
 
 
-/* Optional: Slight random horizontal drift for falling flakes */
 @keyframes fall-drift {
     0% { transform: translate(0, 0); }
     100% { transform: translate(15px, 100vh); }
 }
 
-
+ */
