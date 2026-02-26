@@ -737,7 +737,8 @@ a {
 }
 
 .Experience .duration, 
-.Experience .company {
+.Experience .company,
+.Experience .country  {
 	color: #eeeeee;
 	font-size: 14px;
 	width: fit-content;
@@ -827,7 +828,8 @@ a {
 	}
 
 	.Experience .duration, 
-	.Experience .company {
+	.Experience .company, 
+	.Experience .country {
 		font-size: 12px;
 	}
 }
